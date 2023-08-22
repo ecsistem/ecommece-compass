@@ -1,0 +1,13 @@
+.rating-desconto {
+    font-size: 24px;
+    display: inline-block;
+  }
+  
+  .star {
+    color: #D6D6D6
+  }
+  
+  .star.filled {
+    color: #FFC62A;
+  }
+  
