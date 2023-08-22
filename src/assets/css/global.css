@@ -1,0 +1,130 @@
+@import "./colors.css";
+
+@import "./font.css";
+
+/* Reset CSS */
+
+/* Remove a margem padrão e o preenchimento */
+body {
+  font-family: "Roboto";
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+
+  margin: 0 auto;
+  max-width: 1600px;
+  background-color: var(--bg-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Quebra de texto caso o conteúdo seja muito grande para o container */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Remove estilos padrão da lista */
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove a decoração do link */
+
+a {
+  text-decoration: none;
+}
+
+/* Define a cor do texto para o title */
+
+body {
+  color: var(--color-title);
+}
+
+/* Define a cor do texto do paragrafo para cinza */
+
+p {
+  color: var(--color-gray);
+}
+
+/* O conteúdo da página ocupará a largura total */
+
+/* body,
+html {
+  width: 100%;
+
+  box-sizing: border-box;
+} */
+
+/* Corrige o box-sizing para incluir padding e border no tamanho total do elemento */
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Garante que os elementos de foco sejam visíveis e acessíveis */
+
+a,
+button,
+input,
+textarea,
+select {
+  outline: none;
+}
+
+/* Remova os estilos padrão da tag de botão */
+
+button {
+  width: Fill (302px);
+  height: Hug (56px);
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px;
+  gap: 8px;
+  background: var(--secondary);
+}
+
+/* Define a família de fontes padrão e o tamanho do texto para uma melhor legibilidade */
+
+/* body {
+  font-family: "Inter", sans-serif;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+  -webkit-font-smoothing: antialiased;
+} */
+
+/* O conteúdo se ajustará ao tamanho da tela */
+
+img,
+video {
+  max-width: 100%;
+
+  height: auto;
+}
