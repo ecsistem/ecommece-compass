@@ -1,0 +1,40 @@
+.card-destaque {
+    display: flex;
+    padding: var(--spacing-3-xl, 32px);
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--spacing-xl, 16px);
+    align-self: stretch;
+}
+.card-text-destaque {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-md, 4px);
+    flex: 1 0 0;
+}
+.card-icons-destaques{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 2.813px 0px;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .card-destaque {
+        display: flex;
+        padding: var(--spacing-3-xl, 32px);
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--spacing-xl, 16px);
+        align-self: stretch;
+    }
+    .card-text-destaque {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: var(--spacing-md, 4px);
+        flex: 1 0 0;
+    }
+}
