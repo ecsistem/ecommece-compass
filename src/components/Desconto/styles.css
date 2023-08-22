@@ -1,0 +1,13 @@
+.desconto-container{
+    display: flex;
+    padding: var(--spacing-6-xl, 56px) 200px;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-3-xl, 32px);
+}
+.list-card-desconto{
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-2-xl, 24px);
+    align-self: stretch;
+}

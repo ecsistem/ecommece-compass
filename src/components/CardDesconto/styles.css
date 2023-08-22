@@ -1,0 +1,169 @@
+.container-card-desconto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1 0 0;
+    border-radius: var(--radius-sm, 4px);
+    border: 2px solid #62D0B6;
+    background: #FFF;
+}
+.card-desconto{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    align-self: stretch;
+}
+.card-list-desconto{
+    display: flex;
+    padding: var(--spacing-xl, 16px);
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-xl, 16px);
+    flex: 1 0 0;
+}
+.content-desconto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md, 4px);
+    align-self: stretch;
+}
+.text-desconto{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--spacing-md, 4px);
+    align-self: stretch;
+}
+.title-desconto{
+    color: #333;
+    text-align: right;
+    font-family: Roboto Flex;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px; /* 138.889% *//* 156.25% */
+}
+.description-desconto{
+    color: #666;
+    text-align: right;
+    font-family: Roboto Flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 156.25% */
+}
+.star-desconto{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--spacing-lg, 8px);
+    align-self: stretch;
+}
+.pstars{
+    color: #A5A5A5;
+    text-align: right;
+    font-family: Roboto Flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    }
+    .prices-desconto{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: var(--spacing-lg, 8px);
+        align-self: stretch;
+    }
+    .price-nodiscont{
+        color: #A5A5A5;
+        text-align: right;
+        font-family: Roboto Flex;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        text-decoration-line: strikethrough;
+        text-decoration: line-through;
+    }
+    .price-discont{
+        color: #F55157;
+        text-align: right;
+        font-family: Roboto Flex;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 25px; /* 138.889% */
+    }
+    .buttons-desconto{
+        display: flex;
+        align-items: flex-start;
+        gap: var(--spacing-lg, 8px);
+        align-self: stretch;
+    }
+    .button-like{
+        display: flex;
+        padding: var(--spacing-xl, 16px);
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-lg, 8px);
+        align-self: stretch;
+        border-radius: var(--radius-sm, 4px);
+        border: 1px solid #62D0B6;
+        background: #62D0B6;
+    }
+    .button-cart{
+        display: flex;
+        padding: var(--spacing-xl, 16px);
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-lg, 8px);
+        flex: 1 0 0;
+        border-radius: var(--radius-sm, 4px);
+        border: 1px solid #62D0B6;
+        background: #62D0B6;
+    }
+    .container-image-desconto{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 10px;
+        align-self: stretch;
+        position: relative;
+    }
+    .image-desconto{
+        width: 196px;
+        align-self: stretch;
+        border-radius: 0px 4px 0px 0px;
+    }
+    .banner-desconto{
+        display: flex;
+        width: 67px;
+        height: 30px;
+        padding: 5px 10px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        border-radius: 2px;
+        background: #F55157;
+    }
+    .seta-banner-desconto {
+        width: 10px;
+        height: 20px;
+        position: absolute;
+        right: -6px;
+        top: 9px;
+    }
+    .percentage{
+        color: #FFF;
+        text-align: right;
+        font-family: Roboto Flex;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
