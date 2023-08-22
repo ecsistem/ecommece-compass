@@ -1,4 +1,5 @@
-export function CardDestaque([title, description, iconImage]) {
+import {CardDestaquePropTypes } from '../../types/CardDestaquePropTypes';
+export function CardDestaque({title, description, iconImage}) {
     return (
         <div className="card-destaque">
             <div className="card-text-destaque">
@@ -11,3 +12,4 @@ export function CardDestaque([title, description, iconImage]) {
         </div>
     )
 }
+CardDestaque.propTypes =CardDestaquePropTypes

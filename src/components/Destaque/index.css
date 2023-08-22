@@ -1,0 +1,4 @@
+.container-card-destaque {
+    display: flex;
+    flex-direction: row;
+}
