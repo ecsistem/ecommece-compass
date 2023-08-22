@@ -98,15 +98,16 @@ select {
 
 /* Remova os estilos padrão da tag de botão */
 
-button {
+/* button {
   width: Fill (302px);
   height: Hug (56px);
   padding: 16px;
   border-radius: 4px;
   border: 1px;
+  border-color: var(--border-love);
   gap: 8px;
-  background: var(--secondary);
-}
+  background: var(--bg-primary);
+} */
 
 /* Define a família de fontes padrão e o tamanho do texto para uma melhor legibilidade */
 

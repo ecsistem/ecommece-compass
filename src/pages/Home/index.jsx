@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import reactLogo from './../../assets/images/logo/react.svg'
-import viteLogo from './../../../public/images/vite.svg'
-import './index.css'
+import { useState } from "react";
+import reactLogo from "./../../assets/images/logo/react.svg";
+import viteLogo from "./../../../public/images/vite.svg";
+import "./index.css";
+import ProductsContainer from "../../components/ProductsContainer/ProductsContainer";
 
 export function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
@@ -28,6 +29,8 @@ export function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+
+      <ProductsContainer />
     </>
-  )
+  );
 }
