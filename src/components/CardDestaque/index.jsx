@@ -1,4 +1,5 @@
 import {CardDestaquePropTypes } from '../../types/CardDestaquePropTypes';
+import './style.css';
 export function CardDestaque({title, description, iconImage}) {
     return (
         <div className="card-destaque">

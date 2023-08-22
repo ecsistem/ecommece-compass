@@ -1,5 +1,6 @@
 import { CardDestaque } from '../CardDestaque';
 import { dadosDestaque } from '../../data/dataDestaque';
+import './style.css';
 
 export function Destaque() {
     return (
