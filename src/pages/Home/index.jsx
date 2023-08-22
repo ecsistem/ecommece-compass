@@ -4,7 +4,7 @@ import viteLogo from "./../../../public/images/vite.svg";
 import "./index.css";
 import ProductsContainer from "../../components/ProductsContainer/ProductsContainer";
 
-export function App() {
+export function Home() {
   const [count, setCount] = useState(0);
 
   return (
