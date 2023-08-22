@@ -1,5 +1,8 @@
 import {Rating} from './../Rating';
 import { Countdown } from '../Contdown';
+import CartButton from "../Buttons/CartButton";
+import { FavoriteButton } from "../Buttons/FavoriteButton";
+
 import './styles.css';
 export function CardDesconto(){
     return(
@@ -13,17 +16,17 @@ export function CardDesconto(){
                     </div>
                     <div className="star-desconto">
                         <p className='pstars'>(4.5)</p>
-                        <Rating rating={3} maxStars={5}/>
+                        <Rating rating={4.5} maxStars={5}/>
                     </div>
                     <div className="prices-desconto">
                         <p className="price-nodiscont">de R$ 900,00</p>
                         <p className="price-discont">R$ 780,00</p>
                     </div>
                 </div>
-                    <Countdown date="2023-12-31T23:59:59"/>
+                    <Countdown date="2023-08-28T16:00:00"/>
                     <div className="buttons-desconto">
-                        <button className="button-like">❤️</button>
-                        <button className="button-cart">Carrinho</button>
+                        <FavoriteButton />
+                        <CartButton />
                     </div>
             </div>
             <div className="container-image-desconto">
