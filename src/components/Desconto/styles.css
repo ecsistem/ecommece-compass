@@ -1,6 +1,6 @@
 .desconto-container{
     display: flex;
-    padding: var(--spacing-6-xl, 56px) 200px;
+    padding: var(--spacing-6-xl, 56px) 0px;
     flex-direction: column;
     align-items: flex-end;
     gap: var(--spacing-3-xl, 32px);
@@ -10,4 +10,13 @@
     align-items: flex-start;
     gap: var(--spacing-2-xl, 24px);
     align-self: stretch;
+}
+.title-section{
+    color: #333;
+    text-align: right;
+    font-family: Roboto Flex;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 35px; /* 145.833% */
 }

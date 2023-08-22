@@ -3,9 +3,7 @@ import './styles.css'
 export function Desconto(){
     return(
         <div className='desconto-container'>
-            <div>
-                <h1>Desconto</h1>
-            </div>
+                <h1 className='title-section'>Ofertas terminando em breve</h1>
             <div className='list-card-desconto'>
                 <CardDesconto/>
                 <CardDesconto/>

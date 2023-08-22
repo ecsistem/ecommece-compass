@@ -21,6 +21,24 @@
     justify-content: center;
     align-items: center;
 }
+.title-destaque{
+    color: #333;
+    text-align: right;
+    font-family: Roboto Mono;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 150% */
+}
+.description-destaque{
+    color: #666;
+    text-align: right;
+    font-family: Roboto Flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 25px; /* 156.25% */
+}
 @media screen and (max-width: 768px) {
     .card-destaque {
         display: flex;
