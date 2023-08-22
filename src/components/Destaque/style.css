@@ -1,4 +1,17 @@
 .container-card-destaque {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1px;
+    border-radius: var(--radius-sm, 4px);
+    border: 1px solid var(--border-product, #EEEEEE);
+    background: var(--bg-primary);
+}
+@media screen and (max-width: 768px) {
+    .container-card-destaque {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        align-self: stretch;
+    }
 }
