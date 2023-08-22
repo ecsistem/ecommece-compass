@@ -7,9 +7,9 @@ export function Home() {
 
   return (
     <>
-      <ProductsContainer />
       <Destaque />
       <Desconto />
+      <ProductsContainer />
     </>
   );
 }
