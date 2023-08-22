@@ -1,0 +1,74 @@
+@import "../../assets/css/font.css";
+
+.favoriteButton {
+  display: flex;
+  padding: var(--spacing-xl, 16px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-lg, 8px);
+  align-self: stretch;
+  background-color: white;
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid #eee;
+  transition: background-color 0.3s ease;
+}
+
+.cartButton {
+  color: #333;
+  text-align: right;
+  font-family: Roboto Flex;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+
+  display: flex;
+  padding: var(--spacing-xl, 16px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-lg, 8px);
+  flex: 1 0 0;
+  background-color: white;
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid #eee;
+
+  transition: background-color 0.3s ease;
+}
+
+.favoriteButton img {
+  display: flex;
+  width: 18px;
+  height: 18px;
+  padding: 1.098px 0px 1.66px 0px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartButton img {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  padding: 1.222px 1.229px 1.333px 1.193px;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  background-color: var(--secondary);
+  color: var(--primary);
+  transition-delay: 20ms;
+}
+
+.favoriteButton:hover,
+.cartButton:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+  transition: background-color 0.3s ease;
+}
+
+.favoriteButton.selected img[alt="icon"],
+.favoriteButton:hover img[alt="icon"],
+.cartButton.selected img[alt="icon"],
+.cartButton:hover img[alt="icon"] {
+  filter: brightness(0) invert(1);
+}
