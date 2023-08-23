@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
+import { Badge } from "../Badge";
 import CartButton from "../Buttons/CartButton";
 import { FavoriteButton } from "../Buttons/FavoriteButton";
-
-/* import fakeImage from "../../assets/images/containerImage.svg"; */
 
 import "./Container.css";
 
@@ -13,6 +12,7 @@ function ProductsContainer({ product }) {
     <div className="container">
       <div className="containerContent">
         <img src={product.image} className="productImage"></img>
+        <Badge className="dicountFlag" price={250} priceDiscount={100}></Badge>
         <div className="listContainer">
           <h2 className="title">{product.name}</h2>
           <div className="price">
