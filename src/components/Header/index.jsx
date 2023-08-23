@@ -1,6 +1,6 @@
 import { SearchComponent } from '../SearchComponent';
 import './styles.css'
-export function Header() {
+export function Header({numberCart, username}) {
   return (
     <div className="header">
         <div className="section-details">
@@ -14,7 +14,7 @@ export function Header() {
                         </svg>
                         </div>
                         <div className="number-cart">
-                            <span  className='span-cart'>1</span>
+                            <span  className='span-cart'>{numberCart||0}</span>
                         </div>
                     </div>
                 </div>
@@ -22,7 +22,7 @@ export function Header() {
                     <div className="section-content-profile">
                         <p className="welcome">Bem-vindo</p>
                         <div className="section-nameuser">
-                            <p className="name-user">Welliton</p>
+                            <p className="name-user">{username||"Username"}</p>
                         </div>
                     </div>
                     <div className="section-icon-profile">

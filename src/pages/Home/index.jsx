@@ -8,7 +8,7 @@ export function Home() {
 
   return (
     <>
-      <Header />
+      <Header numberCart={1} username={"Welliton"}/>
       <Destaque />
       <Desconto />
       <ProductsContainer />
