@@ -27,10 +27,10 @@ export function Countdown ({date}) {
 
   return (
     <div className='card-time-countdown'>
-      <div className='day-time-countdown'><span>{days}</span> <p>dias</p></div>
-      <div className='hour-time-countdown'><span>{hours}</span> <p>horas</p></div>
-      <div className='min-time-countdown'><span>{minutes}</span> <p>minutos</p></div>
-      <div className='sec-time-countdown'><span>{seconds}</span> <p>segundos</p></div>
+      <div className='day-time-countdown'><span className='span-countdown'>{days}</span> <p className='p-countdown'>dias</p></div>
+      <div className='hour-time-countdown'><span className='span-countdown'>{hours}</span> <p className='p-countdown'>horas</p></div>
+      <div className='min-time-countdown'><span className='span-countdown'>{minutes}</span> <p className='p-countdown'>minutos</p></div>
+      <div className='sec-time-countdown'><span className='span-countdown'>{seconds}</span> <p className='p-countdown'>segundos</p></div>
     </div>
   );
 }

@@ -4,7 +4,7 @@
     gap: var(--spacing-lg, 8px);
     align-self: stretch;
 }
-.day-time-countdown{
+.day-time-countdown, .hour-time-countdown, .min-time-countdown, .sec-time-countdown{
     display: flex;
     padding: var(--spacing-md, 4px) var(--spacing-xl, 16px) var(--spacing-lg, 8px) var(--spacing-xl, 16px);
     flex-direction: column;
@@ -15,36 +15,21 @@
     border-radius: 4px;
     background: #F8F8F8;
 }
-.hour-time-countdown{
-    display: flex;
-    padding: var(--spacing-md, 4px) var(--spacing-xl, 16px) var(--spacing-lg, 8px) var(--spacing-xl, 16px);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: -5px;
-    flex: 1 0 0;
-    border-radius: 4px;
-    background: #F8F8F8;
+.span-countdown{
+    color: #333;
+    text-align: right;
+    font-family: Roboto Flex;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px; /* 138.889% */
 }
-.min-time-countdown{
-    display: flex;
-    padding: var(--spacing-md, 4px) var(--spacing-xl, 16px) var(--spacing-lg, 8px) var(--spacing-xl, 16px);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: -5px;
-    flex: 1 0 0;
-    border-radius: 4px;
-    background: #F8F8F8;
-}
-.sec-time-countdown{
-    display: flex;
-    padding: var(--spacing-md, 4px) var(--spacing-xl, 16px) var(--spacing-lg, 8px) var(--spacing-xl, 16px);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: -5px;
-    flex: 1 0 0;
-    border-radius: 4px;
-    background: #F8F8F8;
+.p-countdown{
+    color: #A5A5A5;
+    text-align: right;
+    font-family: Roboto Flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
