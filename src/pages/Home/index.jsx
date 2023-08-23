@@ -1,4 +1,3 @@
-import ProductsContainer from "../../components/ProductsContainer/ProductsContainer";
 import ContainerList from "../../components/ContainerList/ContainerList";
 import { Destaque } from "../../components/Destaque";
 import { Desconto } from "../../components/Desconto";
@@ -12,9 +11,8 @@ export function Home() {
       <Header numberCart={1} username={"Welliton"} />
       <Destaque />
       <Desconto />
-      <ProductsContainer />
-      <Footer />
       <ContainerList />
+      <Footer />
     </>
   );
 }
