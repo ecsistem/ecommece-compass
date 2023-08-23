@@ -5,7 +5,7 @@ import { FavoriteButton } from "../Buttons/FavoriteButton";
 import { Badge } from '../Badge';
 
 import './styles.css';
-export function CardDesconto({title, description, price, priceDiscont, image, stars, date}){
+export function CardDesconto({title, description, price, priceDiscount, image, stars, date}){
     return(
         <div className="container-card-desconto">
         <div className="card-desconto">
@@ -21,7 +21,7 @@ export function CardDesconto({title, description, price, priceDiscont, image, st
                     </div>
                     <div className="prices-desconto">
                         <p className="price-nodiscont">de R$ {price}</p>
-                        <p className="price-discont">R$ {priceDiscont}</p>
+                        <p className="price-discont">R$ {priceDiscount}</p>
                     </div>
                 </div>
                     <Countdown date={date}/>
@@ -32,7 +32,7 @@ export function CardDesconto({title, description, price, priceDiscont, image, st
             </div>
             <div className="container-image-desconto">
                 <img className='image-desconto' src={image} alt={title} />
-                <Badge price={price} priceDiscont={priceDiscont} />
+                <Badge price={price} priceDiscount={priceDiscount} />
                 </div>
             </div>
         </div>

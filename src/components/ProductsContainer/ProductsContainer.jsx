@@ -12,7 +12,7 @@ function ProductsContainer({ product }) {
     <div className="container">
       <div className="containerContent">
         <img src={product.image} className="productImage"></img>
-        <Badge className="dicountFlag" price={250} priceDiscount={100}></Badge>
+        <Badge price={product.price} priceDiscount={finalPrice} />
         <div className="listContainer">
           <h2 className="title">{product.name}</h2>
           <div className="price">

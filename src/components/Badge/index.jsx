@@ -1,7 +1,7 @@
 import './styles.css';
 
-export function Badge({price, priceDiscont}) {
-    const porcentagemDesconto = ((price - priceDiscont) / price) * 100;
+export function Badge({price, priceDiscount}) {
+    const porcentagemDesconto = ((price - priceDiscount) / price) * 100;
     const isDiscounted = porcentagemDesconto > 0;
     console.log(porcentagemDesconto);
 
