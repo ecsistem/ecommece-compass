@@ -158,7 +158,7 @@
 }
 
 
-::placeholder {
+.footer-top-card-input::placeholder {
     color: #A5A5A5;
     text-align: right;
     font-family: Roboto Flex;
@@ -325,9 +325,4 @@
         gap: var(--spacing-lg, 8px);
         align-self: stretch;
     }
-
-
-
-
-
 }
