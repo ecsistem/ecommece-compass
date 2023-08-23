@@ -1,0 +1,38 @@
+.banner-desconto{
+    display: flex;
+    width: 67px;
+    height: 30px;
+    padding: 5px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    border-radius: 2px;
+}
+.seta-banner-desconto {
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    right: -6px;
+    top: 9px;
+}
+.percentage{
+    color: #FFF;
+    text-align: right;
+    font-family: Roboto Flex;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-wrap: nowrap;
+}
+.bg-red{
+    background: #F55157;
+    fill: #F55157;
+}
+.bg-blue{
+    background: #62D0B6;
+    fill: #62D0B6;
+}

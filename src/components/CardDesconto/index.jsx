@@ -2,6 +2,7 @@ import {Rating} from './../Rating';
 import { Countdown } from '../Contdown';
 import CartButton from "../Buttons/CartButton";
 import { FavoriteButton } from "../Buttons/FavoriteButton";
+import { Badge } from '../Badge';
 
 import './styles.css';
 export function CardDesconto({title, description, price, priceDiscont, image, stars, date}){
@@ -31,15 +32,9 @@ export function CardDesconto({title, description, price, priceDiscont, image, st
             </div>
             <div className="container-image-desconto">
                 <img className='image-desconto' src={image} alt={title} />
-                <div className="banner-desconto">
-                <svg className='seta-banner-desconto' width="12" height="9" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M7.00003 6L0.250032 0.803848L0.250032 11.1962L7.00003 6Z" fill="#F55157"/>
-</svg>
-<span className='percentage'>25% OFF</span>
-
+                <Badge price={price} priceDiscont={priceDiscont} />
                 </div>
             </div>
-        </div>
         </div>
     )
 }
