@@ -3,7 +3,9 @@ import { Destaque } from '../../components/Destaque'
 import { Desconto } from '../../components/Desconto'
 import { Header } from '../../components/Header'
 import { Footer } from '../../components/Footer'
+import { LowerBanner } from "../../components/LowerBanner";
 import './index.css'
+
 
 export function Home() {
 
@@ -13,6 +15,7 @@ export function Home() {
       <Destaque />
       <Desconto />
       <ProductsContainer />
+      <LowerBanner />
       <Footer />
     </>
   );
