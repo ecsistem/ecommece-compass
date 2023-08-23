@@ -20,13 +20,12 @@
   align-self: stretch;
 }
 
-.img {
+.productImage {
   display: flex;
-  width: 100%;
-  height: 228px;
-  flex-direction: column;
-  align-items: stretch;
+  flex: 1 0 0;
   align-self: stretch;
+  border-radius: 4px 4px 0px 0px;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
 }
 
 .listContainer {
@@ -82,7 +81,6 @@
   align-items: flex-start;
   gap: var(--spacing-lg, 8px);
   align-self: stretch;
-
 }
 
 .container:hover {

@@ -1,15 +1,14 @@
-import ProductsContainer from "../../components/ProductsContainer/ProductsContainer";
-import { Destaque } from '../../components/Destaque'
-import { Desconto } from '../../components/Desconto'
-import './index.css'
+import { Destaque } from "../../components/Destaque";
+import { Desconto } from "../../components/Desconto";
+import ContainerList from "../../components/ContainerList/ContainerList";
+import "./index.css";
 
 export function Home() {
-
   return (
     <>
       <Destaque />
       <Desconto />
-      <ProductsContainer />
+      <ContainerList />
     </>
   );
 }

@@ -1,0 +1,93 @@
+@import "../../assets/css/font.css";
+
+.containerList {
+  display: flex;
+  padding: var(--spacing-6-xl, 56px) 37px;
+  padding-inline: 0%;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-3-xl, 32px);
+}
+
+.containerHeader {
+  display: flex;
+  width: 1200px;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: var(--spacing-md, 4px);
+}
+
+.verTudoButton {
+  margin: 0;
+  display: flex;
+  padding: 10px var(--spacing-xl, 16px) 11px var(--spacing-xl, 16px);
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: var(--spacing-lg, 8px);
+  background-color: white;
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid #d0f1e9;
+  color: #d0f1e9;
+  text-align: right;
+  font-family: Roboto Flex;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.containerTitle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 0 0;
+}
+
+h1 {
+  align-self: stretch;
+  color: #333;
+  text-align: right;
+  font-family: Roboto Flex;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 35px; /* 145.833% */
+}
+
+h2 {
+  align-self: stretch;
+  color: #666;
+  text-align: right;
+  font-family: Roboto Flex;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 156.25% */
+}
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--spacing-2-xl, 24px);
+  align-self: stretch;
+}
+
+.productList > * { 
+    flex: 1 0 calc(25% - var(--spacing-2-xl, 24px));
+  }
+
+.returnNextButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-md, 4px);
+  align-self: stretch;
+}
+
+@media (max-width: 800px) {
+    .productList > * {
+        flex: 1 0 calc(50% - var(--spacing-2-xl, 24px));
+    }
+}
+
