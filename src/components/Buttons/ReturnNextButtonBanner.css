@@ -1,0 +1,44 @@
+.arrowButtonBanner {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  padding: var(--spacing-lg, 8px);
+  margin: 0 auto; /* Centraliza horizontalmente usando margem automática */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 1px solid #EEE;
+  background: transparent;
+}
+
+/* Adicione as media queries conforme necessário */
+@media (max-width: 768px) {
+  .arrowButtonBanner {
+    margin: 0 5%; /* Margem de 5% nas laterais para telas maiores */
+    display: none;
+  }
+}
+
+.arrowBanner {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  padding: 2px 4.667px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+.arrowButtonBanner:hover {
+  background-color: #62D0B6;
+  color: var(--primary);
+  transition: background-color 0.3s ease;
+}
+
+.arrowButtonBanner img[alt="arrowBanner"] {
+  filter: brightness(0) invert(1);
+}

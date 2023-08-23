@@ -5,13 +5,12 @@
   padding: var(--spacing-6-xl, 56px) 37px;
   padding-inline: 0%;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   gap: var(--spacing-3-xl, 32px);
 }
 
 .containerHeader {
   display: flex;
-  width: 1200px;
   justify-content: flex-end;
   align-items: flex-end;
   gap: var(--spacing-md, 4px);
