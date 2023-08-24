@@ -70,7 +70,7 @@ const DUMMY_PRODUCTS = [
 function ContainerList() {
 
   return (
-    <div className="containerList distance">
+    <div className="containerList">
       <div className="containerHeader">
         <button className="verTudoButton">
           <img src={arrowIcon} /> Ver Tudo

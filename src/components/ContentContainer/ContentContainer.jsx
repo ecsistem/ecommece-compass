@@ -1,47 +1,48 @@
+/* eslint-disable react/prop-types */
 import BuyButton from "../Buttons/BuyButton";
-import CartButton from "../Buttons/CartButton";
+import CartButtonProductPage from "../Buttons/CartButtonProductPage";
+import IncrementButton from "../Buttons/IncrementButton";
 import { Rating } from "../Rating";
 
-import iphone from "../../assets/images/IphonePage.svg";
 import vectorImg from "../../assets/images/Icons/Vector.svg";
 
 import "./ContentContainer.css";
 
-function ContentContainer() {
+function ContentContainer({ product }) {
+  const finalPrice = product.price * ((100 - product.discount) / 100);
+
   return (
     <body className="contentContainer">
       <div className="leftContent">
         <div className="divContainer">
-          <h1 className="productTitle">
-            Celular Apple iPhone com dois cartões SIM e 64 GB, além de duas
-            câmeras de alta qualidade
-          </h1>
+          <h1 className="productTitle">{product.name}</h1>
           <div className="ratingStars">
             <p className="ratingComments">(12) avaliações</p>
-            <Rating rating={4.5} maxStars={5}></Rating>
+            <Rating rating={product.rating} maxStars={5}></Rating>
           </div>
-          <p className="productDescription">
-            Apple iPhone 11, Dual SIM, 64 GB, 4G LTE, FaceTime, Roxo, Versão
-            Internacional
-          </p>
+          <p className="productDescription">{product.description}</p>
         </div>
         <div className="divBuy">
           <div className="priceQuantity">
-            <h1 className="productPrice">R$ 5.000,00</h1>
+            <h1 className="productPrice">
+              R${" "}
+              {finalPrice.toLocaleString("pt-BR", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}
+            </h1>
             <div className="quantityProduct">
-              <button className="quatityButton">-</button>
-              <insert className="quantityInsert">0</insert>
-              <button className="quatityButton">+</button>
+              <IncrementButton />
             </div>
           </div>
           <div className="buttonGroup">
-            <CartButton className="cartProductPage" />
+            <CartButtonProductPage />
             <BuyButton />
           </div>
         </div>
       </div>
       <div className="rightContent">
-        <img src={iphone} className="productImage" />
+        <img src={product.image} className="productImage" />
         <button className="enlargeImage">
           <img src={vectorImg} />
         </button>

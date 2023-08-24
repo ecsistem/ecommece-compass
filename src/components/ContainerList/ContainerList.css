@@ -2,6 +2,10 @@
 
 .containerList {
   display: flex;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 80%;
+
   padding: var(--spacing-6-xl, 56px) 37px;
   padding-inline: 0%;
   flex-direction: column;
@@ -21,7 +25,7 @@
   display: flex;
   padding: 10px var(--spacing-xl, 16px) 11px var(--spacing-xl, 16px);
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
   gap: var(--spacing-lg, 8px);
   background-color: white;
   border-radius: var(--radius-sm, 4px);
@@ -72,9 +76,9 @@ h2 {
   align-self: stretch;
 }
 
-.productList > * { 
-    flex: 1 0 calc(25% - var(--spacing-2-xl, 24px));
-  }
+.productList > * {
+  flex: 1 0 calc(25% - var(--spacing-2-xl, 24px));
+}
 
 .returnNextButton {
   display: flex;
@@ -85,8 +89,7 @@ h2 {
 }
 
 @media (max-width: 800px) {
-    .productList > * {
-        flex: 1 0 calc(50% - var(--spacing-2-xl, 24px));
-    }
+  .productList > * {
+    flex: 1 0 calc(50% - var(--spacing-2-xl, 24px));
+  }
 }
-
