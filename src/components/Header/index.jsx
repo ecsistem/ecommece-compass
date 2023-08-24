@@ -2,7 +2,7 @@ import { SearchComponent } from '../SearchComponent';
 import './styles.css'
 export function Header({numberCart, username}) {
   return (
-    <div className="header">
+    <div className="header distance">
         <div className="section-details">
             <div className="section-cart-profile">
                 <div className="section-cart">

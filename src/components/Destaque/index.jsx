@@ -4,7 +4,7 @@ import "./style.css";
 
 export function Destaque() {
   return (
-    <div className="container-card-destaque">
+    <div className="container-card-destaque distance">
       {dadosDestaque.map((destaque, index) => (
         <CardDestaque
           key={index}

@@ -9,10 +9,14 @@ body {
   font-family: "Roboto";
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-
-  margin: 0 auto;
-  max-width: 90%;
   background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+}
+.distance{
+  margin: 0 auto;
+  max-width: 80%;
+  padding: 8px;
 }
 
 h1,

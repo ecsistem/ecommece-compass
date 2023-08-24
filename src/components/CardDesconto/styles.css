@@ -24,6 +24,7 @@
     gap: var(--spacing-xl, 16px);
     flex: 1 0 0;
     flex-wrap: wrap;
+    order: 2;
   }
   
   .content-desconto {
@@ -148,6 +149,7 @@
     gap: 10px;
     align-self: stretch;
     position: relative;
+    order: 1;
   }
   
   .image-desconto {
@@ -167,6 +169,23 @@
       width: 100%; /* Image spans full width on mobile */
       max-width: none; /* Remove max-width for mobile */
       border-radius: 4px; /* Keep rounded corners for the image on mobile */
+    }
+  }
+  @media (min-width: 1199px) {
+    .card-list-desconto{
+      order: 1;
+    }
+    .container-image-desconto{
+      order: 2;
+    }
+  }
+  @media (min-width: 545px) and (max-width: 628px) {
+    .card-list-desconto {
+      order: 1;
+    }
+    
+    .container-image-desconto {
+      order: 2;
     }
   }
   
