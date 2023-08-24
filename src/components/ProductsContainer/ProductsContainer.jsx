@@ -6,9 +6,7 @@ import { ProductsContainerPropTypes } from '../../types/ProductsContainerPropTyp
 
 import "./Container.css";
 
-function ProductsContainer({ product }) {
-  const finalPrice = product.price * ((100 - product.discount) / 100);
-
+function ProductsContainer({ product, finalPrice }) {
   return (
     <div className="container">
       <div className="containerContent">

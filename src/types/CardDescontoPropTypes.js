@@ -7,5 +7,5 @@ export const CardDescontoPropTypes = {
   priceDiscount: PropTypes.number.isRequired, // Add this line
   image: PropTypes.string.isRequired,
   stars: PropTypes.number.isRequired,
-  date: PropTypes.instanceOf(Date).isRequired,
+  date: PropTypes.string.isRequired,
 };

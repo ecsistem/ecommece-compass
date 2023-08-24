@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
 export const HeaderPropTypes ={
-    mumberCart: PropTypes.number.isRequired,
+    mumberCart: PropTypes.number,
     username: PropTypes.string.isRequired,
   };

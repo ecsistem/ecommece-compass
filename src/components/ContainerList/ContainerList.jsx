@@ -1,79 +1,32 @@
+import  { useState, useEffect } from "react";
 import ProductsContainer from "../ProductsContainer/ProductsContainer";
-
 import arrowIcon from "../../assets/images/Icons/ArrowIcon.svg";
-
 import "./ContainerList.css";
 import ReturnButton from "../Buttons/ReturnButton";
 import NextButton from "../Buttons/NextButton.";
-
-import fakeImage from "../../assets/images/containerImage.svg";
-
-const DUMMY_PRODUCTS = [
-  {
-    id: 1,
-    image: fakeImage,
-    name: "ALEXA 1",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 2,
-    image: fakeImage,
-    name: "ALEXA 2",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 3,
-    image: fakeImage,
-    name: "ALEXA 3",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 4,
-    image: fakeImage,
-    name: "ALEXA 4",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 5,
-    image: fakeImage,
-    name: "ALEXA 5",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 6,
-    image: fakeImage,
-    name: "ALEXA 6",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 7,
-    image: fakeImage,
-    name: "ALEXA 7",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 8,
-    image: fakeImage,
-    name: "ALEXA 8",
-    price: 340,
-    discount: 25,
-  },
-];
+import { clienteAxios } from "../../utils/service/cliente-api";
 
 function ContainerList() {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await clienteAxios.get('/products');
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="containerList distance">
       <div className="containerHeader">
         <button className="verTudoButton">
-          <img src={arrowIcon} /> Ver Tudo
+          <img src={arrowIcon} alt="Arrow Icon" /> Ver Tudo
         </button>
         <div className="containerTitle">
           <h1>Produtos em destaque</h1>
@@ -81,7 +34,12 @@ function ContainerList() {
         </div>
       </div>
       <div className="productList">
-        {DUMMY_PRODUCTS.map((product) => <ProductsContainer product={product} key={product.id} /> )}
+        {products.map((product) => {
+          const randomPercentage = Math.random() * 6;
+          const priceApproximation = (randomPercentage + 95) / 100;
+          const finalPrice = product.price * priceApproximation;
+          return <ProductsContainer product={{ ...product }} key={product.id} finalPrice={finalPrice} />;
+        })}
       </div>
       <div className="returnNextButton">
         <ReturnButton />
