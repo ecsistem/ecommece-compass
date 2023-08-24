@@ -10,6 +10,7 @@
     align-items: flex-start;
     gap: var(--spacing-2-xl, 24px);
     align-self: stretch;
+    flex-wrap: wrap;
 }
 .title-section{
     color: #333;

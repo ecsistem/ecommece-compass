@@ -1,4 +1,4 @@
-.container-card-desconto{
+.container-card-desconto {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -6,61 +6,71 @@
     border-radius: var(--radius-sm, 4px);
     border: 2px solid #62D0B6;
     background: #FFF;
-}
-.card-desconto{
+  }
+  
+  .card-desconto {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-start;
     align-self: stretch;
-}
-.card-list-desconto{
+    flex-wrap: wrap;
+  }
+  
+  .card-list-desconto {
     display: flex;
     padding: var(--spacing-xl, 16px);
     flex-direction: column;
     align-items: flex-end;
     gap: var(--spacing-xl, 16px);
     flex: 1 0 0;
-}
-.content-desconto{
+    flex-wrap: wrap;
+  }
+  
+  .content-desconto {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-md, 4px);
     align-self: stretch;
-}
-.text-desconto{
+  }
+  
+  .text-desconto {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: var(--spacing-md, 4px);
     align-self: stretch;
-}
-.title-desconto{
+  }
+  
+  .title-desconto {
     color: #333;
     text-align: right;
     font-family: Roboto Flex;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
-    line-height: 25px; /* 138.889% *//* 156.25% */
-}
-.description-desconto{
+    line-height: 25px;
+  }
+  
+  .description-desconto {
     color: #666;
     text-align: right;
     font-family: Roboto Flex;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 25px; /* 156.25% */
-}
-.star-desconto{
+    line-height: 25px;
+  }
+  
+  .star-desconto {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     gap: var(--spacing-lg, 8px);
     align-self: stretch;
-}
-.pstars{
+  }
+  
+  .pstars {
     color: #A5A5A5;
     text-align: right;
     font-family: Roboto Flex;
@@ -68,72 +78,95 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+  
+  .prices-desconto {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: var(--spacing-lg, 8px);
+    align-self: stretch;
+  }
+  
+  .price-nodiscont {
+    color: #A5A5A5;
+    text-align: right;
+    font-family: Roboto Flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    text-decoration-line: strikethrough;
+    text-decoration: line-through;
+  }
+  
+  .price-discont {
+    color: #F55157;
+    text-align: right;
+    font-family: Roboto Flex;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px;
+  }
+  
+  .buttons-desconto {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-lg, 8px);
+    align-self: stretch;
+  }
+  
+  .button-like {
+    display: flex;
+    padding: var(--spacing-xl, 16px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg, 8px);
+    align-self: stretch;
+    border-radius: var(--radius-sm, 4px);
+    border: 1px solid #62D0B6;
+    background: #62D0B6;
+  }
+  
+  .button-cart {
+    display: flex;
+    padding: var(--spacing-xl, 16px);
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-lg, 8px);
+    flex: 1 0 0;
+    border-radius: var(--radius-sm, 4px);
+    border: 1px solid #62D0B6;
+    background: #62D0B6;
+  }
+  
+  .container-image-desconto {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    position: relative;
+  }
+  
+  .image-desconto {
+    min-width: 196px;
+    align-self: stretch;
+    border-radius: 0px 4px 0px 0px;
+  }
+  
+  /* Media query for mobile */
+  @media (max-width: 767px) {
+    .card-list-desconto {
+      padding: var(--spacing-md, 12px); /* Adjusted padding for mobile */
+      gap: var(--spacing-md, 12px); /* Adjusted gap for mobile */
     }
-    .prices-desconto{
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        gap: var(--spacing-lg, 8px);
-        align-self: stretch;
+  
+    .image-desconto {
+      width: 100%; /* Image spans full width on mobile */
+      max-width: none; /* Remove max-width for mobile */
+      border-radius: 4px; /* Keep rounded corners for the image on mobile */
     }
-    .price-nodiscont{
-        color: #A5A5A5;
-        text-align: right;
-        font-family: Roboto Flex;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 24px;
-        text-decoration-line: strikethrough;
-        text-decoration: line-through;
-    }
-    .price-discont{
-        color: #F55157;
-        text-align: right;
-        font-family: Roboto Flex;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 25px; /* 138.889% */
-    }
-    .buttons-desconto{
-        display: flex;
-        align-items: flex-start;
-        gap: var(--spacing-lg, 8px);
-        align-self: stretch;
-    }
-    .button-like{
-        display: flex;
-        padding: var(--spacing-xl, 16px);
-        justify-content: center;
-        align-items: center;
-        gap: var(--spacing-lg, 8px);
-        align-self: stretch;
-        border-radius: var(--radius-sm, 4px);
-        border: 1px solid #62D0B6;
-        background: #62D0B6;
-    }
-    .button-cart{
-        display: flex;
-        padding: var(--spacing-xl, 16px);
-        justify-content: center;
-        align-items: center;
-        gap: var(--spacing-lg, 8px);
-        flex: 1 0 0;
-        border-radius: var(--radius-sm, 4px);
-        border: 1px solid #62D0B6;
-        background: #62D0B6;
-    }
-    .container-image-desconto{
-        display: flex;
-        justify-content: flex-end;
-        align-items: flex-start;
-        gap: 10px;
-        align-self: stretch;
-        position: relative;
-    }
-    .image-desconto{
-        width: 196px;
-        align-self: stretch;
-        border-radius: 0px 4px 0px 0px;
-    }
+  }
+  
