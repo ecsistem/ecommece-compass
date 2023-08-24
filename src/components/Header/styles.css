@@ -64,6 +64,8 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  border-radius: 50px;
+  background: #F8F8F8;
 }
 .section-icon {
   display: flex;
@@ -87,6 +89,8 @@
   align-items: center;
   gap: 10px;
   position: relative;
+  border-radius: 50px;
+  background: #F8F8F8;
 }
 .icon-cart {
   display: flex;

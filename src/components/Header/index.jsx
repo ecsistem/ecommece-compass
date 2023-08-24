@@ -1,4 +1,5 @@
 import { SearchComponent } from '../SearchComponent';
+import { HeaderPropTypes } from '../../types/HeaderPropTypes';
 import './styles.css'
 export function Header({numberCart, username}) {
   return (
@@ -53,3 +54,4 @@ export function Header({numberCart, username}) {
     </div>
   );
 }
+Header.propTypes = HeaderPropTypes;

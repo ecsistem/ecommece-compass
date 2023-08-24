@@ -1,4 +1,5 @@
 import './styles.css';
+import {BadgePropTypes } from '../../types/BadgePropTypes';
 
 export function Badge({price, priceDiscount}) {
     const porcentagemDesconto = ((price - priceDiscount) / price) * 100;
@@ -20,7 +21,9 @@ export function Badge({price, priceDiscount}) {
           fill={isDiscounted ? `#F55157` : '#62D0B6'}
         />
       </svg>
-      <span className="percentage"> {isDiscounted ? `${porcentagemDesconto.toFixed(2)}% OFF` : 'Novo'}</span>
+      <span className="percentage"> {isDiscounted ? `${ Math.round(porcentagemDesconto)}% OFF` : 'Novo'}</span>
     </div>
   );
 }
+
+Badge.propTypes = BadgePropTypes;

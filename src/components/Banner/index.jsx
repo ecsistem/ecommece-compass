@@ -5,6 +5,7 @@ import './styles.css';
 function Banner() {
   return (
     <div className="banner">
+      <div className="distance">
       <ReturnButtonBanner/>
       <div className="banner-content">
         <h1 className='title-banner'>Macbook PRO M2</h1>
@@ -12,6 +13,7 @@ function Banner() {
         <button className="banner-button-center">Confira</button>
       </div>
       <NextButtonBanner/>
+      </div>
     </div>
   );
 }

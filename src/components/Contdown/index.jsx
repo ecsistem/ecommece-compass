@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './styles.css';
+import { CountdownPropTypes } from '../../types/CountownPropTypes';
 
 export function Countdown ({date}) {
   const targetDate = new Date(date).getTime();
@@ -34,3 +35,4 @@ export function Countdown ({date}) {
     </div>
   );
 }
+Countdown.propTypes = CountdownPropTypes;

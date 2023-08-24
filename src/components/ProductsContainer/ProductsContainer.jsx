@@ -1,7 +1,8 @@
-/* eslint-disable react/prop-types */
 import { Badge } from "../Badge";
 import CartButton from "../Buttons/CartButton";
 import { FavoriteButton } from "../Buttons/FavoriteButton";
+import { formatarPreco } from '../../utils/function/formatarPreco';
+import { ProductsContainerPropTypes } from '../../types/ProductsContainerPropTypes';
 
 import "./Container.css";
 
@@ -16,8 +17,8 @@ function ProductsContainer({ product }) {
         <div className="listContainer">
           <h2 className="title">{product.name}</h2>
           <div className="price">
-            <p className="discount">de R${product.price}</p>
-            <h3 className="discountPrice">por R${finalPrice}</h3>
+            <p className="discount">de {formatarPreco(product.price)}</p>
+            <h3 className="discountPrice">por {formatarPreco(finalPrice)}</h3>
           </div>
           <div className="buttonSection">
             <FavoriteButton />
@@ -28,5 +29,5 @@ function ProductsContainer({ product }) {
     </div>
   );
 }
-
+ProductsContainer.propTypes = ProductsContainerPropTypes;
 export default ProductsContainer;

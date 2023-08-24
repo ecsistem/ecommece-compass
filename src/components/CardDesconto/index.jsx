@@ -3,6 +3,8 @@ import { Countdown } from '../Contdown';
 import CartButton from "../Buttons/CartButton";
 import { FavoriteButton } from "../Buttons/FavoriteButton";
 import { Badge } from '../Badge';
+import { formatarPreco } from '../../utils/function/formatarPreco';
+import { CardDescontoPropTypes } from '../../types/CountownPropTypes';
 
 import './styles.css';
 export function CardDesconto({title, description, price, priceDiscount, image, stars, date}){
@@ -20,8 +22,8 @@ export function CardDesconto({title, description, price, priceDiscount, image, s
                         <Rating rating={stars} maxStars={5}/>
                     </div>
                     <div className="prices-desconto">
-                        <p className="price-nodiscont">de R$ {price}</p>
-                        <p className="price-discont">R$ {priceDiscount}</p>
+                        <p className="price-nodiscont">de {formatarPreco(price)}</p>
+                        <p className="price-discont">{formatarPreco(priceDiscount)}</p>
                     </div>
                 </div>
                     <Countdown date={date}/>
@@ -38,3 +40,4 @@ export function CardDesconto({title, description, price, priceDiscount, image, s
         </div>
     )
 }
+CardDesconto.propTypes =CardDescontoPropTypes

@@ -1,3 +1,4 @@
+import { RatingPropTypes } from '../../types/RatingPropTypes';
 import './styles.css'
   export const Rating = ({ rating, maxStars }) => {
     const renderStars = () => {
@@ -21,3 +22,4 @@ import './styles.css'
       </div>
     );
   };
+  Rating.propTypes = RatingPropTypes;
