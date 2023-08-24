@@ -1,17 +1,10 @@
-import ContainerList from "../../components/ContainerList/ContainerList";
+import { Header } from "../../components/Header";
 import { Destaque } from "../../components/Destaque";
 import { Desconto } from "../../components/Desconto";
-import { Header } from "../../components/Header";
-import { Footer } from "../../components/Footer";
-import "./index.css";
-import Banner from "../../components/Banner";
-import ProductsContainer from "../../components/ProductsContainer/ProductsContainer";
-import { Destaque } from '../../components/Destaque'
-import { Desconto } from '../../components/Desconto'
-import { Header } from '../../components/Header'
-import { Footer } from '../../components/Footer'
+import ContainerList from "../../components/ContainerList/ContainerList";
 import { LowerBanner } from "../../components/LowerBanner";
-import './index.css'
+import {Banner } from "../../components/Banner";
+import { Footer } from "../../components/Footer";
 
 
 export function Home() {
@@ -21,7 +14,7 @@ export function Home() {
       <Banner />
       <Destaque />
       <Desconto />
-      <ProductsContainer />
+      <ContainerList />
       <LowerBanner />
       <Footer />
     </>

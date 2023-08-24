@@ -2,7 +2,7 @@ import NextButtonBanner from '../Buttons/NextButtonBanner';
 import ReturnButtonBanner from '../Buttons/ReturnButtonBanner';
 import './styles.css';
 
-function Banner() {
+export function Banner() {
   return (
     <div className="banner">
       <div className="distance">
@@ -17,5 +17,3 @@ function Banner() {
     </div>
   );
 }
-
-export default Banner;
