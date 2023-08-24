@@ -1,9 +1,9 @@
 import './style.css'
 import  { useState, useEffect } from 'react';
-import banner from '../../assets/images/banners/bannerContainer.png'
-import bannerMobile from '../../assets/images/banners/bannerMobile.png'
-import itemImg from '../../assets/images/banners/lap.png'
-import arrow from '../../assets/images/Icons/iconArrow.svg'
+import banner from './../../assets/images/banners/bannerContainer.png'
+import bannerMobile from './../../assets/images/banners/bannerMobile.png'
+import itemImg from './../../assets/images/banners/lap.png'
+import arrow from './../../assets/images/Icons/iconArrow.svg'
 
 export function LowerBanner() {
         const [shouldRenderItemImg, setShouldRenderItemImg] = useState(true);
