@@ -8,6 +8,10 @@
 
 }
 
+.lower-banner-img {
+    width: 100%;
+}
+
 
 .lower-banner-img-card {
     position: absolute;
@@ -75,7 +79,7 @@
     line-height: 24px;
 }
 
-@media screen and (max-width: 1660px) {
+@media screen and (max-width: 1646px) {
     .lower-banner-text-card {
         display: flex;
         height: 432px;
@@ -127,8 +131,8 @@
 
         .lower-banner-text-card {
             display: flex;
-            width: 428px;
-            height: 195px;
+            max-width: 428px;
+            height: auto;
             padding: 0px var(--spacing-2-xl, 24px);
             flex-direction: column;
             justify-content: center;
