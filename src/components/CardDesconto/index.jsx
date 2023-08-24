@@ -4,7 +4,7 @@ import CartButton from "../Buttons/CartButton";
 import { FavoriteButton } from "../Buttons/FavoriteButton";
 import { Badge } from '../Badge';
 import { formatarPreco } from '../../utils/function/formatarPreco';
-import { CardDescontoPropTypes } from '../../types/CountownPropTypes';
+import { CardDescontoPropTypes } from '../../types/CardDescontoPropTypes';
 
 import './styles.css';
 export function CardDesconto({title, description, price, priceDiscount, image, stars, date}){
