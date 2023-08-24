@@ -1,7 +1,7 @@
 import './style.css'
 import  { useState, useEffect } from 'react';
 import banner from './../../assets/images/banners/bannerContainer.png'
-import bannerMobile from '../../assets/images/banners/bannerMobile.png';
+import bannerMobile from './../../assets/images/banners/BannerMobile.png';
 import itemImg from './../../assets/images/banners/lap.png'
 import arrow from './../../assets/images/Icons/iconArrow.svg'
 
