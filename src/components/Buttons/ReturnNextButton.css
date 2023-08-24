@@ -32,3 +32,8 @@
 .arrowButton:hover img[alt="arrow"] {
   filter: brightness(0) invert(1);
 }
+
+.arrowButton:disabled {
+  display: none;
+  cursor: not-allowed;
+}

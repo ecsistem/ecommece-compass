@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { SearchComponent } from '../SearchComponent';
 import { HeaderPropTypes } from '../../types/HeaderPropTypes';
 import './styles.css'
@@ -37,6 +38,7 @@ export function Header({numberCart, username}) {
                 </div>
             </div>
             <SearchComponent />
+            <Link to={`/`}>
             <div className="section-logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
   <g clipPath="url(#clip0_200_369)">
@@ -50,6 +52,7 @@ export function Header({numberCart, username}) {
   </defs>
 </svg>
             </div>
+            </Link>
         </div>
     </div>
   );

@@ -151,7 +151,6 @@
   align-self: stretch;
   border-radius: var(--radius-sm, 4px);
   border: 1px solid #eee;
-  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
 }
 
 .enlargeImage {

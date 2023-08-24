@@ -8,6 +8,8 @@ import { clienteAxios } from "../../utils/service/cliente-api";
 
 function ContainerList() {
   const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 8;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -22,6 +24,23 @@ function ContainerList() {
     fetchData();
   }, []);
 
+  const handleNextPage = () => {
+    console.log("Next button clicked");
+    setCurrentPage(currentPage + 1);
+  };
+
+  const handleReturnPage = () => {
+    console.log("Return button clicked");
+    setCurrentPage(currentPage - 1);
+  };
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+
+  console.log("Current Page:", currentPage);
+  console.log("Current Products:", currentProducts);
+
   return (
     <div className="containerList distance">
       <div className="containerHeader">
@@ -34,7 +53,7 @@ function ContainerList() {
         </div>
       </div>
       <div className="productList">
-        {products.map((product) => {
+        {currentProducts.map((product) => {
           const randomPercentage = Math.random() * 6;
           const priceApproximation = (randomPercentage + 95) / 100;
           const finalPrice = product.price * priceApproximation;
@@ -42,8 +61,8 @@ function ContainerList() {
         })}
       </div>
       <div className="returnNextButton">
-        <ReturnButton />
-        <NextButton />
+        <ReturnButton onClick={handleReturnPage} disabled={currentPage === 1} />
+        <NextButton onClick={handleNextPage} disabled={indexOfLastProduct >= products.length} />
       </div>
     </div>
   );

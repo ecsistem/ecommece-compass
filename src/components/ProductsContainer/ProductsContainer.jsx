@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Badge } from "../Badge";
 import CartButton from "../Buttons/CartButton";
 import { FavoriteButton } from "../Buttons/FavoriteButton";
@@ -9,6 +10,7 @@ import "./Container.css";
 function ProductsContainer({ product, finalPrice }) {
   return (
     <div className="container">
+      <Link to={`/pagina-de-detalhes/${product.id}`}>
       <div className="containerContent">
         <img src={product.image} className="productImage"></img>
         <Badge price={product.price} priceDiscount={finalPrice} />
@@ -24,6 +26,7 @@ function ProductsContainer({ product, finalPrice }) {
           </div>
         </div>
       </div>
+      </Link>
     </div>
   );
 }
