@@ -10,9 +10,10 @@ import "./Container.css";
 function ProductsContainer({ product, finalPrice }) {
   return (
     <div className="container">
-      <Link to={`/pagina-de-detalhes/${product.id}`}>
       <div className="containerContent">
+      <Link to={`/pagina-de-detalhes/${product.id}`}>
         <img src={product.image} className="productImage"></img>
+        </Link>
         <Badge price={product.price} priceDiscount={finalPrice} />
         <div className="listContainer">
           <h2 className="title">{product.name}</h2>
@@ -26,7 +27,6 @@ function ProductsContainer({ product, finalPrice }) {
           </div>
         </div>
       </div>
-      </Link>
     </div>
   );
 }
