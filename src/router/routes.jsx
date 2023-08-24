@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { Home } from "../pages/Home"
+import { ProductsPage } from "../pages/Products/ProductsPage";
 
 
 export function MainRoutes(){
@@ -7,6 +8,7 @@ export function MainRoutes(){
   return (
     <Routes>
       <Route path="/" element={<Home />} />
+      <Route path="/paginade-de-detalhes" element={<ProductsPage />} />
     </Routes>
   );
 }

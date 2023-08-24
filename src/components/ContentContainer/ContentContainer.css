@@ -1,0 +1,169 @@
+.contentContainer {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 24px;
+  align-self: stretch;
+}
+
+.leftContent {
+  display: flex;
+  height: 651px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.divContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-xl, 16px);
+  align-self: stretch;
+}
+
+.productTitle {
+  color: #333;
+  text-align: right;
+  font-family: Roboto Flex;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 147%; /* 35.28px */
+  align-self: stretch;
+}
+
+.ratingStars {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--spacing-xl, 16px);
+  align-self: stretch;
+}
+
+.ratingComments {
+  color: #666;
+  text-align: right;
+  font-family: Roboto Flex;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.productDescription {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg, 8px);
+  align-self: stretch;
+  color: #666;
+  text-align: right;
+  font-family: Roboto Flex;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 156.25% */
+}
+
+.divBuy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-2-xl, 24px);
+  align-self: stretch;
+}
+
+.priceQuantity {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xl, 16px);
+  align-self: stretch;
+}
+
+.buttonGroup {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-xl, 16px);
+  align-self: stretch;
+}
+
+.productPrice {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex: 1 0 0;
+  color: #333;
+  font-family: Roboto Flex;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 147%; /* 35.28px */
+}
+
+.quantityProduct {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--spacing-xl, 16px);
+}
+
+.quatityButton {
+  display: flex;
+  height: 50px;
+  padding: 0px var(--spacing-xl, 16px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-2-xl, 24px);
+  border-radius: 4px;
+  border: 1px solid #eee;
+  background: #fff;
+}
+
+.quantityButton:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+  transition: background-color 0.3s ease;
+}
+
+.quantityInsert {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.cartProductPage {
+  border: 1px solid #62d0b6;
+  background: #fff;
+  color: #62d0b6;
+}
+
+.rightContent {
+  align-self: flex-end;
+}
+
+.productImage {
+  display: flex;
+  height: auto;
+  /* alinhar bloco da imagem e fazer margens do container */
+  flex: 1 0 0;
+  align-self: stretch;
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid #eee;
+  background: url(<path-to-image>), lightgray 50% / cover no-repeat;
+}
+
+.enlargeImage {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  align-items: flex-start;
+  gap: 10px;
+  position: absolute;
+  left: 15px;
+  bottom: 15px;
+  border-radius: 2px;
+  border: 1px solid #eee;
+}
