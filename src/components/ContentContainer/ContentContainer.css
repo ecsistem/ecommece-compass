@@ -145,12 +145,9 @@
 
 .productImage {
   display: flex;
-  height: auto;
-  /* alinhar bloco da imagem e fazer margens do container */
+  height: 250px;
   flex: 1 0 0;
   align-self: stretch;
-  border-radius: var(--radius-sm, 4px);
-  border: 1px solid #eee;
 }
 
 .enlargeImage {

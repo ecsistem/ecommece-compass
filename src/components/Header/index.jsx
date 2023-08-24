@@ -38,8 +38,8 @@ export function Header({numberCart, username}) {
                 </div>
             </div>
             <SearchComponent />
-            <Link to={`/`}>
             <div className="section-logo">
+            <Link to={`/`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44" fill="none">
   <g clipPath="url(#clip0_200_369)">
     <path d="M32.9992 35.7002C30.5792 35.7002 28.5992 37.6802 28.5992 40.1002C28.5992 42.5202 30.5792 44.5002 32.9992 44.5002C35.4192 44.5002 37.3992 42.5202 37.3992 40.1002C37.3992 37.6802 35.4192 35.7002 32.9992 35.7002ZM17.5992 35.7002C15.1792 35.7002 13.1992 37.6802 13.1992 40.1002C13.1992 42.5202 15.1792 44.5002 17.5992 44.5002C20.0192 44.5002 21.9992 42.5202 21.9992 40.1002C21.9992 37.6802 20.0192 35.7002 17.5992 35.7002Z" fill="#62D0B6"/>
@@ -51,8 +51,8 @@ export function Header({numberCart, username}) {
     </clipPath>
   </defs>
 </svg>
-            </div>
             </Link>
+            </div>
         </div>
     </div>
   );
