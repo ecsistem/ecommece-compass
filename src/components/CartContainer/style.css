@@ -158,4 +158,16 @@
     .cart-item-wrapper{
         flex-direction: column;
     }
+    .cart-cancel-button{
+        order: 1;
+    }
+    .cart-item-description-card{
+        order: 2;
+    }
+    .cart-item-value-text {
+        order: 3;
+    }
+    .cart-item-quantity-button{
+        order: 4;
+    }
     }

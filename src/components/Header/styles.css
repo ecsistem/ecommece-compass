@@ -131,6 +131,9 @@
   .section-details {
     gap: var(--spacing-xl, 16px);
   }
+  .section-content-profile{
+    display: none;
+  }
   .section-cart-profile{
     order: 1;
   }
