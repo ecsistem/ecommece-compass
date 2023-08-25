@@ -12,7 +12,7 @@ function ProductsContainer({ product, priceAddition }) {
     <div className="container">
       <div className="containerContent">
         <Link to={`/pagina-de-detalhes/${product.id}`}>
-          <img src={product.image} className="productImage"/>
+          <img src={product.image} className="productsImage" />
         </Link>
         <Badge price={priceAddition} priceDiscount={product.price} />
         <div className="listContainer">
@@ -24,7 +24,7 @@ function ProductsContainer({ product, priceAddition }) {
                 <h3 className="discountPrice">
                   por {formatarPreco(product.price)}
                 </h3>
-                </>
+              </>
             ) : (
               <h3 className="PriceGray">por {formatarPreco(product.price)}</h3>
             )}
