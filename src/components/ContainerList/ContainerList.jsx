@@ -54,10 +54,12 @@ function ContainerList() {
       </div>
       <div className="productList">
         {currentProducts.map((product) => {
-          const randomPercentage = Math.random() * 6;
-          const priceApproximation = (randomPercentage + 95) / 100;
-          const finalPrice = product.price * priceApproximation;
-          return <ProductsContainer product={{ ...product }} key={product.id} finalPrice={finalPrice} />;
+          const min = -5;
+          const max = 10; 
+          const randomPercentage = Math.floor(Math.random() * (max - min + 1)) + min;
+          const priceApproximation = (randomPercentage * product.price) / 100;
+          const priceAddition = product.price + priceApproximation;          
+          return <ProductsContainer product={{ ...product }} key={product.id} priceAddition={priceAddition} />;
         })}
       </div>
       <div className="returnNextButton">
