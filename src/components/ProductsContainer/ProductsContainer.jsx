@@ -19,12 +19,12 @@ function ProductsContainer({ product, priceAddition }) {
           <h2 className="title">{product.title}</h2>
           <div className="price">
             {isPriceLower(product.price, priceAddition) ? (
-              <div>
+              <>
                 <p className="addition">de {formatarPreco(priceAddition)}</p>
                 <h3 className="discountPrice">
                   por {formatarPreco(product.price)}
                 </h3>
-              </div>
+                </>
             ) : (
               <h3 className="PriceGray">por {formatarPreco(product.price)}</h3>
             )}
