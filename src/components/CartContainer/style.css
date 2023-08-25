@@ -4,6 +4,7 @@
     align-items: flex-start;
     gap: var(--spacing-2-xl, 24px);
     flex-shrink: 0;
+    flex-wrap: wrap;
 }
 
 .cart-product-options-card {
@@ -153,3 +154,8 @@
     
 }
 
+@media screen and (max-width: 445px){
+    .cart-item-wrapper{
+        flex-direction: column;
+    }
+    }
