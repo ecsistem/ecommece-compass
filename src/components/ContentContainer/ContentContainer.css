@@ -118,6 +118,7 @@
 
 .rightContent {
   align-self: flex-end;
+  position: relative;
 }
 
 .productImage {
@@ -133,11 +134,19 @@
   width: 40px;
   height: 40px;
   padding: 10px;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   position: absolute;
   left: 15px;
   bottom: 15px;
   border-radius: 2px;
   border: 1px solid #eee;
+  background: #FFFFFF;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.enlargeImage:hover {
+  background: #62D0B6;
+  border: 1px solid #62D0B6;
 }
