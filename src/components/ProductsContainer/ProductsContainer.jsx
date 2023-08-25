@@ -12,14 +12,14 @@ function ProductsContainer({ product, priceAddition }) {
     <div className="container">
       <div className="containerContent">
         <Link to={`/pagina-de-detalhes/${product.id}`}>
-          <img src={product.image} className="productImage"/>
+          <img src={product.image} className="productsImage" />
         </Link>
         <Badge price={priceAddition} priceDiscount={product.price} />
         <div className="listContainer">
           <h2 className="title">{product.title}</h2>
           <div className="price">
             {isPriceLower(product.price, priceAddition) ? (
-              <div>
+              <div className="price">
                 <p className="addition">de {formatarPreco(priceAddition)}</p>
                 <h3 className="discountPrice">
                   por {formatarPreco(product.price)}
