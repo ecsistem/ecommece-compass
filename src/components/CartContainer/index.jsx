@@ -2,7 +2,7 @@ import './style.css'
 import { CartItems } from '../CartItems'
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import Line from '../../assets/images/Icons/line.svg'
+import Line from '../../assets/images/Icons/Line.svg'
 
 
 export function CartContainer({ cart }) {
