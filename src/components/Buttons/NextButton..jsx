@@ -1,5 +1,5 @@
 import "./ReturnNextButton.css";
-
+import { ButtonPaginationTypes } from "../../types/ButtonPaginationTypes";
 import arrowRight from "../../assets/images/Icons/arrow_right.svg";
 
 function NextButton({ onClick, disabled }) {
@@ -13,3 +13,4 @@ function NextButton({ onClick, disabled }) {
 }
 
 export default NextButton;
+NextButton.propTypes = ButtonPaginationTypes
