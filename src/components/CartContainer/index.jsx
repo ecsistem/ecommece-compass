@@ -29,7 +29,7 @@ export function CartContainer({ cart }) {
     }
     return (
 
-        <div className="cart-content-container">
+        <div className="cart-content-container distance">
             <div className="cart-product-options-card">
                 <div className="cart-product-text">Resumo Pedido</div>
                 <div className="cart-product-value-wrapper">

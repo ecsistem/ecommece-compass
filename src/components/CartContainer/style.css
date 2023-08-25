@@ -1,8 +1,6 @@
 .cart-content-container {
-    display: flex;
-    width: 1600px;
+    display: flex;;
     height: auto;
-    padding: var(--spacing-4-xl, 40px) 200px;
     align-items: flex-start;
     gap: var(--spacing-2-xl, 24px);
     flex-shrink: 0;
