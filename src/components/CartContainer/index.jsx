@@ -8,10 +8,10 @@ import Line from '../../assets/images/Icons/line.svg'
 export function CartContainer({ cart }) {
     const [cartItems, setCartItems] = useState(cart);
     const [totalValue, setTotalValue] = useState(0);
-    
+
     console.log(totalValue);
 
-     const updateCartItems = (updatedItems) => {
+    const updateCartItems = (updatedItems) => {
         setCartItems(updatedItems);
         const newTotalValue = updatedItems.reduce((total, item) => total + item.value * item.quantity, 0);
         setTotalValue(newTotalValue);
