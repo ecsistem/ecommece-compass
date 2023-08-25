@@ -92,7 +92,7 @@
   border: 1px solid var(--secondary);
   transition: border-color 20ms ease;
 }
-.PriceGray {
+.PriceGray{
   color: #333;
   text-align: right;
   font-family: Roboto Flex;

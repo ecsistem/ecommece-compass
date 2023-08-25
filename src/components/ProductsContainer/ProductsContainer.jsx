@@ -12,7 +12,7 @@ function ProductsContainer({ product, priceAddition }) {
     <div className="container">
       <div className="containerContent">
         <Link to={`/pagina-de-detalhes/${product.id}`}>
-          <img src={product.image} className="productsImage"/>
+          <img src={product.image} className="productImage"/>
         </Link>
         <Badge price={priceAddition} priceDiscount={product.price} />
         <div className="listContainer">
