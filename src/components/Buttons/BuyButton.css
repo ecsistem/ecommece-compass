@@ -18,7 +18,7 @@
 }
 
 .buyButton:hover {
-  background-color: var(--secondary);
-  color: var(--primary);
-  transition: background-color 0.3s ease;
-}
+    background-color: var(--secondary);
+    color: var(--primary);
+    transition: background-color 0.3s ease;
+  }

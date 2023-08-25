@@ -1,79 +1,51 @@
+import  { useState, useEffect } from "react";
 import ProductsContainer from "../ProductsContainer/ProductsContainer";
-
 import arrowIcon from "../../assets/images/Icons/ArrowIcon.svg";
-
 import "./ContainerList.css";
 import ReturnButton from "../Buttons/ReturnButton";
 import NextButton from "../Buttons/NextButton.";
-
-import fakeImage from "../../assets/images/containerImage.svg";
-
-const DUMMY_PRODUCTS = [
-  {
-    id: 1,
-    image: fakeImage,
-    name: "ALEXA 1",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 2,
-    image: fakeImage,
-    name: "ALEXA 2",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 3,
-    image: fakeImage,
-    name: "ALEXA 3",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 4,
-    image: fakeImage,
-    name: "ALEXA 4",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 5,
-    image: fakeImage,
-    name: "ALEXA 5",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 6,
-    image: fakeImage,
-    name: "ALEXA 6",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 7,
-    image: fakeImage,
-    name: "ALEXA 7",
-    price: 340,
-    discount: 25,
-  },
-  {
-    id: 8,
-    image: fakeImage,
-    name: "ALEXA 8",
-    price: 340,
-    discount: 25,
-  },
-];
+import { clienteAxios } from "../../utils/service/cliente-api";
 
 function ContainerList() {
+  const [products, setProducts] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const productsPerPage = 8;
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await clienteAxios.get('/products');
+        setProducts(response.data);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const handleNextPage = () => {
+    console.log("Next button clicked");
+    setCurrentPage(currentPage + 1);
+  };
+
+  const handleReturnPage = () => {
+    console.log("Return button clicked");
+    setCurrentPage(currentPage - 1);
+  };
+
+  const indexOfLastProduct = currentPage * productsPerPage;
+  const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
+  const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
+
+  console.log("Current Page:", currentPage);
+  console.log("Current Products:", currentProducts);
 
   return (
-    <div className="containerList distance">
+    <div className="containerList">
       <div className="containerHeader">
         <button className="verTudoButton">
-          <img src={arrowIcon} /> Ver Tudo
+          <img src={arrowIcon} alt="Arrow Icon" /> Ver Tudo
         </button>
         <div className="containerTitle">
           <h1>Produtos em destaque</h1>
@@ -81,11 +53,18 @@ function ContainerList() {
         </div>
       </div>
       <div className="productList">
-        {DUMMY_PRODUCTS.map((product) => <ProductsContainer product={product} key={product.id} /> )}
+        {currentProducts.map((product) => {
+          const min = -5;
+          const max = 10; 
+          const randomPercentage = Math.floor(Math.random() * (max - min + 1)) + min;
+          const priceApproximation = (randomPercentage * product.price) / 100;
+          const priceAddition = product.price + priceApproximation;          
+          return <ProductsContainer product={{ ...product }} key={product.id} priceAddition={priceAddition} />;
+        })}
       </div>
       <div className="returnNextButton">
-        <ReturnButton />
-        <NextButton />
+        <ReturnButton onClick={handleReturnPage} disabled={currentPage === 1} />
+        <NextButton onClick={handleNextPage} disabled={indexOfLastProduct >= products.length} />
       </div>
     </div>
   );

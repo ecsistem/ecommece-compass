@@ -4,6 +4,7 @@
 
 .container {
   width: 282px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -19,13 +20,17 @@
   align-items: center;
   align-self: stretch;
   position: relative;
+  max-height: 480px;
 }
 
-.productImage {
+.productsImage {
   display: flex;
   flex: 1 0 0;
+  max-width: 282px;
+  height: 228px;
   align-self: stretch;
   border-radius: 4px 4px 0px 0px;
+  min-height: 250px;
 }
 
 .listContainer {
@@ -48,7 +53,7 @@
   line-height: normal;
 }
 
-.discount {
+.addition {
   color: #a5a5a5;
   font-family: Roboto Flex;
   font-size: 14px;
@@ -86,4 +91,13 @@
 .container:hover {
   border: 1px solid var(--secondary);
   transition: border-color 20ms ease;
+}
+.PriceGray {
+  color: #333;
+  text-align: right;
+  font-family: Roboto Flex;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
 }

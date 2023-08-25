@@ -2,10 +2,10 @@ import "./ReturnNextButton.css";
 
 import arrowRight from "../../assets/images/Icons/arrow_right.svg";
 
-function NextButton() {
+function NextButton({ onClick, disabled }) {
   return (
     <>
-      <button className="arrowButton">
+      <button className="arrowButton" onClick={onClick} disabled={disabled}>
         <img src={arrowRight} alt="arrow" />
       </button>
     </>
