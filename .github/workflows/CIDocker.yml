@@ -26,6 +26,5 @@ jobs:
         echo "Construindo imagem Docker: $COMANDO_DE_CONSTRUCAO"
         $COMANDO_DE_CONSTRUCAO
 
-    - name: Exibir a Etiqueta da Imagem
-      run: echo "Etiqueta da imagem Docker: ${{ github.repository }}:$(date +%s)"
-      
+    - name: Display Image Tag
+      run: echo "Docker image tag: ${{ github.repository }}:$IMAGE_TAG"
