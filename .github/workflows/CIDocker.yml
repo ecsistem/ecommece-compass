@@ -25,6 +25,3 @@ jobs:
         COMANDO_DE_CONSTRUCAO="docker build . --file Dockerfile --tag $NOME_DA_IMAGEM:$ETIQUETA_DA_IMAGEM"
         echo "Construindo imagem Docker: $COMANDO_DE_CONSTRUCAO"
         $COMANDO_DE_CONSTRUCAO
-
-    - name: Display Image Tag
-      run: echo "Docker image tag: ${{ github.repository }}:$IMAGE_TAG"
