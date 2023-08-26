@@ -15,13 +15,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout do Repositório
-      uses: actions/checkout@v2
-
-    - name: Construir a Imagem Docker
-      run: |
-        NOME_DA_IMAGEM="${{ github.repository }}"
-        ETIQUETA_DA_IMAGEM="$(date +%s)"
-        COMANDO_DE_CONSTRUCAO="docker build . --file Dockerfile --tag $NOME_DA_IMAGEM:$ETIQUETA_DA_IMAGEM"
-        echo "Construindo imagem Docker: $COMANDO_DE_CONSTRUCAO"
-        $COMANDO_DE_CONSTRUCAO
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag ecommece-compass:$(date +%s)
