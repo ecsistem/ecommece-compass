@@ -6,23 +6,26 @@ on:
       - main
       - develop
   pull_request:
-    branches: [ "main", "develop" ]
+    branches:
+      - main
+      - develop
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
+    - name: Checkout do Repositório
       uses: actions/checkout@v2
 
-    - name: Build Docker Image
+    - name: Construir a Imagem Docker
       run: |
-        IMAGE_NAME="${{ github.repository }}"
-        IMAGE_TAG="$(date +%s)"
-        DOCKER_BUILD_CMD="docker build . --file Dockerfile --tag $IMAGE_NAME:$IMAGE_TAG"
-        echo "Building Docker image: $DOCKER_BUILD_CMD"
-        $DOCKER_BUILD_CMD
+        NOME_DA_IMAGEM="${{ github.repository }}"
+        ETIQUETA_DA_IMAGEM="$(date +%s)"
+        COMANDO_DE_CONSTRUCAO="docker build . --file Dockerfile --tag $NOME_DA_IMAGEM:$ETIQUETA_DA_IMAGEM"
+        echo "Construindo imagem Docker: $COMANDO_DE_CONSTRUCAO"
+        $COMANDO_DE_CONSTRUCAO
 
-    - name: Display Image Tag
-      run: echo "Docker image tag: ${{ github.repository }}:$(date +%s)"
+    - name: Exibir a Etiqueta da Imagem
+      run: echo "Etiqueta da imagem Docker: ${{ github.repository }}:$(date +%s)"
+      
