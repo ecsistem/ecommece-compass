@@ -1,8 +1,8 @@
 import './style.css'
-import PropTypes from 'prop-types';
 import CancelIcon from '../../assets/images/Icons/Cancel.svg'
 import MinorIcon from '../../assets/images/Icons/minoricon.svg'
 import PlusIcon from '../../assets/images/Icons/plusicon.svg'
+import { CartItemTypes } from './../../types/CartItensTypes'
 import { useState, useEffect } from 'react'
 
 
@@ -57,13 +57,5 @@ export function CartItems(props) {
     )
 }
 
-CartItems.propTypes = {
-    title: PropTypes.string.isRequired,
-    value: PropTypes.number.isRequired,
-    quantity: PropTypes.number.isRequired,
-    image: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-    cartItems: PropTypes.array.isRequired,
-    updateCartItems: PropTypes.func.isRequired,
-  };
+CartItems.propTypes = CartItemTypes
   
