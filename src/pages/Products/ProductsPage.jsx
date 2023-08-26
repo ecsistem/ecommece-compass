@@ -30,20 +30,28 @@ export function ProductsPage() {
   let content;
 
   if (loading) {
-    content = (<div className="loading-container">
-    <p>Loading...</p>
-  </div>);
+    content = (
+      <div className="loading-container">
+        <p>Loading...</p>
+      </div>
+    );
   } else if (error) {
-    content = <p className="error-message">{error}</p>;
+    content = (
+      <p className="error-message">{error}</p>
+    );
   } else if (product) {
     content = <ContentContainer product={product} key={product.id} />;
+  } else {
+    content = (
+      <p className="error-message">Produto não encontrado</p>
+    );
   }
 
   return (
-    <>
+    <div className="content-wrapper">
       <Header numberCart={1} username="Welliton" />
       <div className="content-container">{content}</div>
       <Footer />
-    </>
+    </div>
   );
 }
