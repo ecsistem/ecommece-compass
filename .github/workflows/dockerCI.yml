@@ -1,0 +1,33 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches:
+      - main
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout do Repositório
+      uses: actions/checkout@v2
+
+    - name: Construir a Imagem Docker
+      run: |
+        NOME_DA_IMAGEM="${{ github.repository }}"
+        ETIQUETA_DA_IMAGEM="$(date +%s)"
+        COMANDO_DE_CONSTRUCAO="docker build . --file Dockerfile --tag $NOME_DA_IMAGEM:$ETIQUETA_DA_IMAGEM"
+        echo "Construindo imagem Docker: $COMANDO_DE_CONSTRUCAO"
+        $COMANDO_DE_CONSTRUCAO
+
+    - name: Exibir a Etiqueta da Imagem
+      run: echo "Etiqueta da imagem Docker ${{ github.repository }}_$(date +%s)"
+
+      
+      
