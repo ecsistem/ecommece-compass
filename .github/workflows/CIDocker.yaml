@@ -1,0 +1,28 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  pull_request:
+    branches: [ "main", "develop" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Build Docker Image
+      run: |
+        IMAGE_NAME="${{ github.repository }}"
+        IMAGE_TAG="$(date +%s)"
+        DOCKER_BUILD_CMD="docker build . --file Dockerfile --tag $IMAGE_NAME:$IMAGE_TAG"
+        echo "Building Docker image: $DOCKER_BUILD_CMD"
+        $DOCKER_BUILD_CMD
+
+    - name: Display Image Tag
+      run: echo "Docker image tag: ${{ github.repository }}:$(date +%s)"

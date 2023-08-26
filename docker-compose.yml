@@ -1,0 +1,22 @@
+version: "3"
+
+project_name: ecommece-compass
+
+services:
+  # Serviço para o ambiente de desenvolvimento com o Vite
+  development:
+    build:
+      context: .
+      target: development
+    ports:
+      - "3000:3000" # Porta para acesso ao servidor de desenvolvimento do Vite
+    volumes:
+      - .:/app # Monta o diretório local como volume para refletir as alterações no contêiner em tempo real
+
+  # Serviço para o ambiente de produção com o Nginx
+  production:
+    build:
+      context: .
+      target: final
+    ports:
+      - "80:80" # Porta para acesso ao servidor Nginx em modo de produção
