@@ -1,0 +1,39 @@
+.cartButtonPage {
+  display: flex;
+  padding: var(--spacing-xl, 16px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-lg, 8px);
+  flex: 1 0 0;
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid #62d0b6;
+  background: #fff;
+  color: #62d0b6;
+  text-align: right;
+  font-family: Roboto Flex;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  cursor: pointer;
+}
+
+.cartButtonPage:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+  transition: background-color 0.3s ease;
+}
+
+.cartButtonPage img {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  padding: 1.222px 1.229px 1.333px 1.193px;
+  justify-content: center;
+  align-items: center;
+  fill: #62d0b6
+}
+
+.cartButtonPage:hover img[alt="icon"] {
+    filter: brightness(0) invert(1);
+  }

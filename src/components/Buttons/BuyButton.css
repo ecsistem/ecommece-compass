@@ -1,0 +1,25 @@
+.buyButton {
+  display: flex;
+  padding: var(--spacing-xl, 16px);
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-lg, 8px);
+  flex: 1 0 0;
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid #62d0b6;
+  background: #62d0b6;
+  color: #fff;
+  text-align: right;
+  font-family: Roboto Flex;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  cursor: pointer;
+}
+
+.buyButton:hover {
+    background-color: #81D9C5;
+    color: var(--primary);
+    transition: #81D9C5 0.3s ease;
+  }

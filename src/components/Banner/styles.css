@@ -1,0 +1,65 @@
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url(./../../assets/images/banner/banner.png) center/cover
+    no-repeat;
+  padding: 0 20px;
+  height: 500px; /* Defina a altura do banner como aproximadamente 500px */
+  margin-bottom: 60px;
+}
+
+.banner-button-center {
+  width: 200px;
+  padding: var(--spacing-xl, 16px);
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid #62d0b6;
+  background: #62d0b6;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  font-family: Roboto Mono;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 16px 0;
+}
+
+.banner-button-center:hover {
+  background-color: #81D9C5;
+  color: var(--primary);
+}
+
+.banner-content {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0 20px;
+}
+
+.banner-button-left {
+  order: -1;
+}
+
+.banner-button-right {
+  order: 1;
+}
+.title-banner {
+  color: #fff;
+  text-align: center;
+  font-family: Roboto Mono;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 70px; /* 145.833% */
+}
+.description-banner {
+  color: #f8f8f8;
+  text-align: center;
+  font-family: Roboto Mono;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; /* 156.25% */
+}

@@ -1,33 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './../../assets/images/logo/react.svg'
-import viteLogo from './../../../public/images/vite.svg'
-import './index.css'
+import { Header } from "../../components/Header";
+import { Destaque } from "../../components/Destaque";
+import { Desconto } from "../../components/Desconto";
+import ContainerList from "../../components/ContainerList/ContainerList";
+import { LowerBanner } from "../../components/LowerBanner";
+import {Banner } from "../../components/Banner";
+import { Footer } from "../../components/Footer";
+import { selectCartTotalItems } from '../../components/Slices/CartSelector';
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
-export function App() {
-  const [count, setCount] = useState(0)
 
+export function Home() {
+  const numberCart = useSelector(selectCartTotalItems);
+  console.log('%c🚀Gostou do projeto? Contrate nosso squad! 🚀', 'font-size: 18px; color: #f39c12; font-weight: bold;');
+console.log('%c📧 Segue nosso github: @ecsistem, @eduardokuritza, cristopherkovalski', 'font-size: 14px; color: #3498db;');
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noopener noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Teste</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header numberCart={numberCart} username={"Welliton"} />
+      <Banner />
+      <Destaque />
+      <Desconto />
+      <ContainerList />
+      <LowerBanner />
+      <Footer />
     </>
-  )
+  );
 }
