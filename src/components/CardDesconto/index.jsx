@@ -8,6 +8,16 @@ import { CardDescontoPropTypes } from '../../types/CardDescontoPropTypes';
 
 import './styles.css';
 export function CardDesconto({title, description, price, priceDiscount, image, stars, date}){
+    const product = {
+        id: Math.random(), // You can generate a unique ID here
+        title,
+        description,
+        price,
+        priceDiscount,
+        image,
+        stars,
+        date,
+      };
     return(
         <div className="container-card-desconto">
         <div className="card-desconto">
@@ -29,7 +39,7 @@ export function CardDesconto({title, description, price, priceDiscount, image, s
                     <Countdown date={date}/>
                     <div className="buttons-desconto">
                         <FavoriteButton />
-                        <CartButton />
+                        <CartButton product={product} priceAddition={priceDiscount}/>
                     </div>
             </div>
             <div className="container-image-desconto">

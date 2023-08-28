@@ -31,7 +31,7 @@ function ProductsContainer({ product, priceAddition }) {
           </div>
           <div className="buttonSection">
             <FavoriteButton />
-            <CartButton />
+            <CartButton product={product} />
           </div>
         </div>
       </div>

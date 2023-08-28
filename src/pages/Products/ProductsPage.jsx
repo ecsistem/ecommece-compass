@@ -5,8 +5,11 @@ import ContentContainer from '../../components/ContentContainer/ContentContainer
 import { Footer } from '../../components/Footer';
 import { clienteAxios } from '../../utils/service/cliente-api';
 import './ProductsPage.css';
+import { selectCartTotalItems } from '../../components/Slices/CartSelector';
+import { useSelector } from "react-redux/es/hooks/useSelector";
 
 export function ProductsPage() {
+  const numberCart = useSelector(selectCartTotalItems);
   const { productId } = useParams();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -49,7 +52,7 @@ export function ProductsPage() {
 
   return (
     <div className="content-wrapper">
-      <Header numberCart={1} username="Welliton" />
+      <Header numberCart={numberCart} username="Welliton" />
       <div className="content-container">{content}</div>
       <Footer />
     </div>

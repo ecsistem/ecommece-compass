@@ -1,17 +1,21 @@
 import './style.css'
 import { CartItems } from '../CartItems'
-import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useSelector } from 'react-redux';
+import { selectTotalAmount} from '../Slices/TotalAmount'
+
 import Line from '../../assets/images/Icons/Line.svg'
 
 
-export function CartContainer({ cart }) {
-    const [cartItems, setCartItems] = useState(cart);
-    const [totalValue, setTotalValue] = useState(0);
+export function CartContainer() {
+    const cartItems = useSelector(state => state.cart.items);
+    console.log(cartItems);
+    const totalValue = useSelector (selectTotalAmount)
+    const displayTotalValue = Math.abs(totalValue) < 0.01 ? 0 : totalValue;
+    
 
     console.log(totalValue);
 
-    const updateCartItems = (updatedItems) => {
+    /*const updateCartItems = (updatedItems) => {
         setCartItems(updatedItems);
         const newTotalValue = updatedItems.reduce((total, item) => total + item.value * item.quantity, 0);
         setTotalValue(newTotalValue);
@@ -22,9 +26,9 @@ export function CartContainer({ cart }) {
         const initialTotalValue = cartItems.reduce((total, item) => total + item.value * item.quantity, 0);
 
         setTotalValue(initialTotalValue);
-    }, [cartItems]);
+    }, [cartItems]);*/
 
-    if (!cart) {
+    if (!cartItems) {
         return <div>Loading...</div>;
     }
     return (
@@ -34,7 +38,7 @@ export function CartContainer({ cart }) {
                 <div className="cart-product-text">Resumo Pedido</div>
                 <div className="cart-product-value-wrapper">
                     <div className="cart-product-value-text">
-                        R$ {totalValue}
+                        R$ {displayTotalValue.toFixed(2)}
                     </div>
                     <div className="cart-product-total-text">Total</div>
                 </div>
@@ -58,12 +62,9 @@ export function CartContainer({ cart }) {
                         key={item.id}
                         id={item.id}
                         title={item.title}
-                        value={item.value}
-                        quantity={item.quantity}
+                        value={item.price}
+                        quantity={item.amount}
                         image={item.image}
-                        cartItems={cartItems}
-                        updateCartItems={updateCartItems}
-
                     />
                 ))}
             </div>
@@ -72,16 +73,3 @@ export function CartContainer({ cart }) {
     )
 
 }
-CartContainer.propTypes = {
-    cart: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number.isRequired,
-            title: PropTypes.string.isRequired,
-            value: PropTypes.number.isRequired,
-            quantity: PropTypes.number.isRequired,
-            image: PropTypes.string.isRequired,
-            cartItems: PropTypes.array.isRequired,
-        })
-    ).isRequired,
-    updateCartItems: PropTypes.func.isRequired,
-};

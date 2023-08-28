@@ -12,6 +12,7 @@
     "deploy-s3": "aws s3 sync dist/ s3://seu-bucket-s3"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
