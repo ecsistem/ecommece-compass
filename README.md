@@ -128,11 +128,11 @@ Se tiver alguma dúvida ou precisar entrar em contato, você pode me encontrar e
 - GitHub: [eduardokuritza](https://github.com/eduardokuritza)
 - LinkedIn: [https://www.linkedin.com/in/eduardokuritza/]
 
-//Eduardo Kuritza
+//Cristopher Kovalski Saporit
 - E-mail: cristopher.sapori.pb@compasso.com.br
 - GitHub: [Cristopher Kovalski Saporiti](https://www.github.com/cristopherkovalski)
 - LinkedIn: [https://www.linkedin.com/in/cristopher-kovalski-saporiti-a09526146/]
 
 ## Suporte ✉️
 
-Para suporte, entre em contato enviando um e-mail para edson.costa.pb@compasso.com.br. Estou à disposição para ajudar com qualquer dúvida ou problema relacionado ao projeto.
+Para suporte, entre em contato enviando um e-mail para edson.costa.pb@compasso.com.br,  eduardo.kuritza.pb@compasso.com.br ou cristopher.sapori.pb@compasso.com.br. Estamos à disposição para ajudar com qualquer dúvida ou problema relacionado ao projeto.
