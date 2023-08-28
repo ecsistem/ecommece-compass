@@ -3,9 +3,11 @@ import CancelIcon from '../../assets/images/Icons/Cancel.svg'
 import MinorIcon from '../../assets/images/Icons/minoricon.svg'
 import PlusIcon from '../../assets/images/Icons/plusicon.svg'
 import { CartItemTypes } from './../../types/CartItensTypes'
-
 import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
 import { removeFromCart, addToCart, removeAllById } from '../Slices/CartSlice'; // Ajuste o caminho
+import { formatarPreco } from '../../utils/function/formatarPreco'
+import { Link } from 'react-router-dom'
 
 
 export function CartItems(props) {
@@ -13,16 +15,20 @@ export function CartItems(props) {
 
   const increaseQuantity = () => {
     dispatch(addToCart({ id: props.id, amount: 1, price: props.value }));
+    toast.success(`${props.title} adicionado ao carrinho!`);
+
   };
 
   const decreaseQuantity = () => {
     if (props.quantity > 0) {
       dispatch(removeFromCart(props.id));
+      toast.error(`Um ${props.title} removido do carrinho!`);
     }
   };
 
   const handleRemoveItem = () => {
     dispatch(removeAllById(props.id));
+    toast.error(`${props.title} foi removido do carrinho`);
   };
 
   const calculatedValue = props.value * props.quantity;
@@ -33,7 +39,7 @@ export function CartItems(props) {
         <img src={CancelIcon} alt="Cancel Icon" />
       </button>
       <p className="cart-item-value-text">
-        R$ {calculatedValue.toFixed(2)}
+        {formatarPreco(calculatedValue)}
       </p>
       <div className="cart-item-quantity-button">
         <button
@@ -54,7 +60,7 @@ export function CartItems(props) {
           <img className="cart-plus-icon" src={PlusIcon} alt="Plus Icon" />
         </button>
       </div>
-      <div className="cart-item-description-card">
+        <Link className='cart-item-description-card' to={`/pagina-de-detalhes/${props.id}`}>
         <div className="cart-item-description-wrapper">
           <div className="cart-item-description-text-container">
             <p className="cart-item-description-text">{props.title}</p>
@@ -62,7 +68,7 @@ export function CartItems(props) {
           </div>
         </div>
         <img className="cart-item-img" src={props.image} alt="Item" />
-      </div>
+        </Link>
     </div>
   );
 }

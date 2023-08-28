@@ -34,22 +34,17 @@ function ContainerList() {
   }, [products]);
 
   const handleNextPage = () => {
-    console.log("Next button clicked");
     setCurrentPage(currentPage + 1);
   };
 
   const handleReturnPage = () => {
-    console.log("Return button clicked");
     setCurrentPage(currentPage - 1);
   };
 
   const indexOfLastProduct = currentPage * productsPerPage;
   const indexOfFirstProduct = indexOfLastProduct - productsPerPage;
   const currentProducts = products.slice(indexOfFirstProduct, indexOfLastProduct);
-
-  console.log("Current Page:", currentPage);
-  console.log("Current Products:", currentProducts);
-
+  
   return (
     <div className="containerList">
       <div className="containerHeader">

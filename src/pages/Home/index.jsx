@@ -11,6 +11,8 @@ import { useSelector } from "react-redux/es/hooks/useSelector";
 
 export function Home() {
   const numberCart = useSelector(selectCartTotalItems);
+  console.log('%c🚀Gostou do projeto? Contrate nosso squad! 🚀', 'font-size: 18px; color: #f39c12; font-weight: bold;');
+console.log('%c📧 Segue nosso github: @ecsistem, @eduardokuritza, cristopherkovalski', 'font-size: 14px; color: #3498db;');
   return (
     <>
       <Header numberCart={numberCart} username={"Welliton"} />

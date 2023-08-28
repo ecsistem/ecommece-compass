@@ -6,7 +6,6 @@ import './styles.css'
 
 export function Header({ numberCart, username}) {
     
-    console.log(numberCart);
   return (
     <div className="header distance">
         <div className="section-details">

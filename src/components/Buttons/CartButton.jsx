@@ -3,6 +3,7 @@ import { addToCart } from '../Slices/CartSlice'
 import cartlogo from "../../assets/images/Icons/cart.svg";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
+import { toast } from 'react-toastify';
 
 function CartButton({ product }) {
   const dispatch = useDispatch();
@@ -14,12 +15,12 @@ function CartButton({ product }) {
       title: product.title,
       amount: 1,
     };
-    console.log(item);
     dispatch(addToCart(item));
+    toast.success(`${item.title} adicionado ao carrinho!`);
   };
   return (
    
-    <>
+    <>  
       <button onClick={addItemToCartHandler} className={classes.cartButton}>
         Carrinho
         <img src={cartlogo} alt="icon" />

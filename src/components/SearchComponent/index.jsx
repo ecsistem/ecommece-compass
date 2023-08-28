@@ -10,7 +10,6 @@ export function SearchComponent() {
   
     const handleSearchSubmit = (event) => {
       event.preventDefault();
-      console.log('Termo de busca:', searchTerm);
     };
   
     return (

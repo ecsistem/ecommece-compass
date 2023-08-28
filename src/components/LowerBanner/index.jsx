@@ -26,10 +26,8 @@ export function LowerBanner() {
                 }
 
                 if (windowWidth <= 800) {
-                    console.log('Setting banner to mobile');
                     setBannerImage(bannerMobile); 
                 } else {
-                    console.log('Setting default');
                     setBannerImage(banner); 
                 }
             };
