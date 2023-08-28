@@ -110,13 +110,21 @@ Isso executará o build da aplicação usando o Vite e, em seguida, iniciará o 
 
 ## Autores 👤
 - [@Edson Costa](https://www.github.com/ecsistem)
+- [@Eduardo Kuritza](https://www.github.com/eduardokuritza)
 
 ## Contato📱
 
 Se tiver alguma dúvida ou precisar entrar em contato, você pode me encontrar em:
+
+//Edson Costa
 - E-mail: edson.costa.pb@compasso.com.br
 - GitHub: [ecsistem](https://github.com/ecsistem)
-- LinkedIn [https://www.linkedin.com/in/edsoncostadev/](https://www.linkedin.com/in/edsoncostadev/)
+- LinkedIn: [https://www.linkedin.com/in/edsoncostadev/](https://www.linkedin.com/in/edsoncostadev/)
+
+//Eduardo Kuritza
+- E-mail: eduardo.kuritza.pb@compasso.com.br
+- GitHub: [eduardokuritza](https://github.com/eduardokuritza)
+- LinkedIn: [https://www.linkedin.com/in/eduardokuritza/]
 
 ## Suporte ✉️
 

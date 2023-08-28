@@ -44,7 +44,7 @@
 }
 
 .title {
-  align-self: stretch;
+  align-self: flex-end;
   color: #333;
   text-align: right;
   font-family: Roboto Flex;
@@ -55,7 +55,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  max-width: 320px;
+  width: 320px;
 }
 
 .addition {
