@@ -53,9 +53,7 @@
   font-weight: 500;
   line-height: normal;
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
-  width: 320px;
 }
 
 .addition {
