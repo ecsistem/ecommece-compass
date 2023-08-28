@@ -151,9 +151,14 @@
     font-weight: 500;
     line-height: 24px;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out; 
     
 }
 
+.cart-coupon-submit-button:hover {
+    background-color: #62D0B6; 
+    opacity: 0.75;
+}
 @media screen and (max-width: 445px){
     .cart-item-wrapper{
         flex-direction: column;

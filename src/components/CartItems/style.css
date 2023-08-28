@@ -28,7 +28,14 @@
     border-radius: 50px;
     background: #F8F8F8;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out; 
 }
+
+.cart-cancel-button:hover {
+    background-color: #F55157; 
+    opacity: 0.75;
+  }
+
 
 .cart-cancel-icon {
     width: 12px;
@@ -57,6 +64,7 @@
     background: #FFF;
 }
 
+
 .cart-minor-button {
     display: flex;
     width: 16px;
@@ -65,9 +73,17 @@
     justify-content: center;
     align-items: center;
     border: 0;
+    border-radius: 25%;
     background: #FFF;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out; 
 
+}
+
+.cart-minor-button:hover {
+    background-color: #62D0B6; 
+    opacity:0.75;
+    
 }
 
 .cart-minor-icon {
@@ -85,8 +101,16 @@
     justify-content: center;
     align-items: center;
     border: 0;
+    border-radius: 25%;
     background: #FFF;
     cursor: pointer;
+    transition: background-color 0.3s ease-in-out; 
+}
+
+.cart-plus-button:Hover {
+    background-color: #62D0B6; 
+    opacity: 0.75;
+    
 }
 
 .cart-plus-icon {
