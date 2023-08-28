@@ -12,6 +12,7 @@
   border-radius: 50%;
   border: 1px solid #EEE;
   background: transparent;
+  cursor: pointer;
 }
 
 /* Adicione as media queries conforme necessário */
