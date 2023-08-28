@@ -8,25 +8,8 @@ import Line from '../../assets/images/Icons/Line.svg'
 
 export function CartContainer() {
     const cartItems = useSelector(state => state.cart.items);
-    console.log(cartItems);
     const totalValue = useSelector (selectTotalAmount)
     const displayTotalValue = Math.abs(totalValue) < 0.01 ? 0 : totalValue;
-    
-
-    console.log(totalValue);
-
-    /*const updateCartItems = (updatedItems) => {
-        setCartItems(updatedItems);
-        const newTotalValue = updatedItems.reduce((total, item) => total + item.value * item.quantity, 0);
-        setTotalValue(newTotalValue);
-        console.log(newTotalValue);
-    };
-
-    useEffect(() => {
-        const initialTotalValue = cartItems.reduce((total, item) => total + item.value * item.quantity, 0);
-
-        setTotalValue(initialTotalValue);
-    }, [cartItems]);*/
 
     if (!cartItems) {
         return <div>Loading...</div>;

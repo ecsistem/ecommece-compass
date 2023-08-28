@@ -4,8 +4,6 @@ import {BadgePropTypes } from '../../types/BadgePropTypes';
 export function Badge({price, priceDiscount}) {
     const porcentagemDesconto = ((price - priceDiscount) / price) * 100;
     const isDiscounted = porcentagemDesconto > 0;
-    console.log(porcentagemDesconto);
-
   return (
     <div className={`banner-desconto ${isDiscounted ? 'bg-red' : 'bg-blue'}`}>
       <svg
