@@ -1,4 +1,4 @@
-import  { useState, useEffect } from "react";
+import  { useState, useEffect, useMemo } from "react";
 import ProductsContainer from "../ProductsContainer/ProductsContainer";
 import arrowIcon from "../../assets/images/Icons/ArrowIcon.svg";
 import "./ContainerList.css";
@@ -23,6 +23,15 @@ function ContainerList() {
 
     fetchData();
   }, []);
+
+  const priceAdditions = useMemo(() => {
+    return products.map(product => {
+      const min = -5;
+      const max = 10;
+      const randomPercentage = Math.floor(Math.random() * (max - min + 1)) + min;
+      return (randomPercentage * product.price) / 100 + product.price;
+    });
+  }, [products]);
 
   const handleNextPage = () => {
     console.log("Next button clicked");
@@ -53,14 +62,13 @@ function ContainerList() {
         </div>
       </div>
       <div className="productList">
-        {currentProducts.map((product) => {
-          const min = -5;
-          const max = 10; 
-          const randomPercentage = Math.floor(Math.random() * (max - min + 1)) + min;
-          const priceApproximation = (randomPercentage * product.price) / 100;
-          const priceAddition = product.price + priceApproximation;          
-          return <ProductsContainer product={{ ...product }} key={product.id} priceAddition={priceAddition} />;
-        })}
+      {currentProducts.map((product, index) => (
+          <ProductsContainer
+            product={{ ...product }}
+            key={product.id}
+            priceAddition={priceAdditions[index]} // Use precalculated priceAddition
+          />
+        ))}
       </div>
       <div className="returnNextButton">
         <ReturnButton onClick={handleReturnPage} disabled={currentPage === 1} />
