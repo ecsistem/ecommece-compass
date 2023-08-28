@@ -3,7 +3,7 @@ import { dataPromocao } from './../../data/dataPomocao';
 import './styles.css'
 export function Desconto(){
     return(
-        <div className='desconto-container distance'>
+        <div className='desconto-container'>
                 <h1 className='title-section'>Ofertas terminando em breve</h1>
             <div className='list-card-desconto'>
             {dataPromocao.map((card, index) => (

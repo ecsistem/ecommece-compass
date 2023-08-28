@@ -17,7 +17,7 @@
 
 .leftContent {
   display: flex;
-  height: 651px;
+  height: 751px;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
@@ -124,6 +124,7 @@
   position: relative;
   border-radius: var(--radius-sm, 4px);
   border: 1px solid #EEE;
+  padding: 50px;
 }
 
 .productImage {
