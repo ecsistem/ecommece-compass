@@ -3,6 +3,7 @@ import { addToCart } from "../Slices/CartSlice";
 import cartlogo from "../../assets/images/Icons/cart.svg";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
+import { toast } from "react-toastify";
 
 function CartButtonDestaque({ product }) {
   const dispatch = useDispatch();
@@ -14,8 +15,8 @@ function CartButtonDestaque({ product }) {
       title: product.title,
       amount: 1,
     };
-    console.log(item);
     dispatch(addToCart(item));
+    toast.success(`${item.title} adicionado ao carrinho!`);
   };
   return (
     <>

@@ -14,7 +14,6 @@ import PropTypes from 'prop-types';
 };*/
 
 function IncrementButton({ quantity, setQuantity }) {
-  /*const [quantity, dispatch] = useReducer(quantityReducer, 1);*/
     const decreaseQuantity = () => {
       if (quantity > 0) {
         setQuantity(quantity - 1);
