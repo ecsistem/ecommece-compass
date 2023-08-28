@@ -1,17 +1,32 @@
 .container-card-destaque {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1px;
-    border-radius: var(--radius-sm, 4px);
-    border: 1px solid var(--border-product, #EEEEEE);
-    background: var(--bg-primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1px;
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid var(--border-product, #eeeeee);
+  background: var(--bg-primary);
 }
+
+.container-card-destaque > :first-child {
+    border-right: 1px solid var(--border-product, #EEEEEE);
+}
+
+.container-card-destaque > :last-child {
+    border-left: 1px solid var(--border-product, #EEEEEE);
+}
+
 @media screen and (max-width: 768px) {
-    .container-card-destaque {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        align-self: stretch;
-    }
+  .container-card-destaque {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+
+  .container-card-destaque > :not(:last-child) {
+    border-right: none;
+    border-bottom: 1px solid var(--border-product, #eeeeee);
+  }
 }

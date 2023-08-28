@@ -21,6 +21,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  
 }
 
 .divContainer {
@@ -117,16 +118,21 @@
 }
 
 .rightContent {
-  align-self: flex-end;
+  display: flex;
+  align-self: center;
+  height: 651px;
   position: relative;
+  border-radius: var(--radius-sm, 4px);
+  border: 1px solid #EEE;
 }
 
 .productImage {
   display: flex;
-  width: 100%;
-  height: 250px auto;
+  max-width: 590px;
+  max-height: 651px;
   flex: 1 0 0;
-  align-self: stretch;
+  align-self: center;
+  align-items: stretch;
 }
 
 .enlargeImage {
@@ -141,12 +147,28 @@
   bottom: 15px;
   border-radius: 2px;
   border: 1px solid #eee;
-  background: #FFFFFF;
+  background: #ffffff;
   align-content: center;
   justify-content: center;
   cursor: pointer;
+  align-self: flex-end;
 }
 .enlargeImage:hover {
-  background: #62D0B6;
-  border: 1px solid #62D0B6;
+  background: #62d0b6;
+  border: 1px solid #62d0b6;
+}
+
+@media (max-width: 768px) {
+  .contentContainer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .rightContent {
+    margin-top: 24px;
+  }
+
+  .productImage {
+    max-height: 80vw;
+  }
 }

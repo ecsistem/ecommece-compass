@@ -4,8 +4,13 @@
     align-items: flex-start;
     flex: 1 0 0;
     border-radius: var(--radius-sm, 4px);
-    border: 2px solid #62D0B6;
+    border: 2px solid #EEE;
     background: #FFF;
+  }
+
+  .container-card-desconto:hover {
+    border: 1px solid var(--secondary);
+    transition: border-color 20ms ease;
   }
   
   .card-desconto {
