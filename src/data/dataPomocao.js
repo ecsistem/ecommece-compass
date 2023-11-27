@@ -8,7 +8,7 @@ export const dataPromocao = [
       priceDiscount: 700.00,
       image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRU3aE-8vYhoF4Ih1S-xZo5wyRj_urlo_dbe3r1Jfzqw4q1RetUBae3ExlPIqc9Wzdongsai0m7pPt65RS6ih2oGwQgPLE3ZlHJ1u3-munDr247DCLcWhUy-A&usqp=CAc",
       stars: 4.5,
-      date: "2023-09-28T16:00:00"
+      date: "2023-12-25T16:00:00"
     },
     {
       title: "Novo relógio inteligente da série 7",
@@ -17,7 +17,7 @@ export const dataPromocao = [
       priceDiscount: 700.00,
       image: "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRU3aE-8vYhoF4Ih1S-xZo5wyRj_urlo_dbe3r1Jfzqw4q1RetUBae3ExlPIqc9Wzdongsai0m7pPt65RS6ih2oGwQgPLE3ZlHJ1u3-munDr247DCLcWhUy-A&usqp=CAc",
       stars: 4.5,
-      date: "2023-10-30T16:00:00"
+      date: "2024-12-01T16:00:00"
     }
   ];
   
